@@ -1,0 +1,816 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B819239120162D93001FDD6B /* SensorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B819239020162D92001FDD6B /* SensorDetailViewController.swift */; };
+		B81923932016350A001FDD6B /* SensorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81923922016350A001FDD6B /* SensorService.swift */; };
+		B81AC2ED2018CE230038C93B /* StreamApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81AC2EC2018CE230038C93B /* StreamApi.swift */; };
+		B81AC2EF2018D9230038C93B /* ConnectedSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81AC2EE2018D9230038C93B /* ConnectedSensor.swift */; };
+		B884C9642021E70E001EC74A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C9632021E70D001EC74A /* Camera.swift */; };
+		B884C969202211ED001EC74A /* base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C968202211ED001EC74A /* base64.swift */; };
+		B89FAF6120132DC700720CD9 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF5E20132DC700720CD9 /* MainTabController.swift */; };
+		B89FAF7220132E3300720CD9 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6620132E3200720CD9 /* Account.swift */; };
+		B89FAF7320132E3300720CD9 /* ProductId.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6720132E3200720CD9 /* ProductId.swift */; };
+		B89FAF7420132E3300720CD9 /* PlatformFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6820132E3200720CD9 /* PlatformFactory.swift */; };
+		B89FAF7520132E3300720CD9 /* SensorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6920132E3200720CD9 /* SensorFactory.swift */; };
+		B89FAF7620132E3300720CD9 /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6A20132E3200720CD9 /* Accelerometer.swift */; };
+		B89FAF7720132E3300720CD9 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6B20132E3200720CD9 /* Sensor.swift */; };
+		B89FAF7820132E3300720CD9 /* PlatformList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6C20132E3200720CD9 /* PlatformList.swift */; };
+		B89FAF7920132E3300720CD9 /* SensorStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6D20132E3200720CD9 /* SensorStatus.swift */; };
+		B89FAF7A20132E3300720CD9 /* SensorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6E20132E3200720CD9 /* SensorType.swift */; };
+		B89FAF7B20132E3300720CD9 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6F20132E3200720CD9 /* Platform.swift */; };
+		B89FAF7C20132E3300720CD9 /* AccountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF7020132E3200720CD9 /* AccountFactory.swift */; };
+		B89FAF7D20132E3300720CD9 /* CMSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF7120132E3200720CD9 /* CMSensor.swift */; };
+		B89FAF8120132E4E00720CD9 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF7F20132E4D00720CD9 /* AccountService.swift */; };
+		B89FAF8220132E4E00720CD9 /* PlatformService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF8020132E4D00720CD9 /* PlatformService.swift */; };
+		B89FAF8720132E5F00720CD9 /* SensorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF8520132E5E00720CD9 /* SensorListView.swift */; };
+		B89FAF8D20132E7B00720CD9 /* KairaiApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF8920132E7B00720CD9 /* KairaiApi.swift */; };
+		B89FAF8E20132E7B00720CD9 /* KairaiApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF8A20132E7B00720CD9 /* KairaiApiError.swift */; };
+		B89FAF8F20132E7B00720CD9 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF8B20132E7B00720CD9 /* Resource.swift */; };
+		B89FAF9020132E7B00720CD9 /* KairaiResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF8C20132E7B00720CD9 /* KairaiResource.swift */; };
+		B89FAF9220132EBD00720CD9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF9120132EBC00720CD9 /* Error.swift */; };
+		B89FAF952013309D00720CD9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF932013309C00720CD9 /* LoginViewController.swift */; };
+		B89FAF962013309D00720CD9 /* SensorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF942013309D00720CD9 /* SensorsViewController.swift */; };
+		B89FAF982013334D00720CD9 /* SensorListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF972013334C00720CD9 /* SensorListViewCell.swift */; };
+		B8A49FEE2013158700434CFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A49FED2013158700434CFC /* AppDelegate.swift */; };
+		B8A49FF52013158700434CFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A49FF32013158700434CFC /* Main.storyboard */; };
+		B8A49FF72013158800434CFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A49FF62013158800434CFC /* Assets.xcassets */; };
+		B8A49FFA2013158800434CFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A49FF82013158800434CFC /* LaunchScreen.storyboard */; };
+		B8A4A0052013158800434CFC /* kairai_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A4A0042013158800434CFC /* kairai_iOSTests.swift */; };
+		B8A4A0102013158800434CFC /* kairai_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A4A00F2013158800434CFC /* kairai_iOSUITests.swift */; };
+		C0A1303DDA8480D2738157B6 /* Pods_kairai_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE08AD9621F5FFE16A9580AC /* Pods_kairai_iOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8A4A0012013158800434CFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8A49FE22013158700434CFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8A49FE92013158700434CFC;
+			remoteInfo = "kairai-iOS";
+		};
+		B8A4A00C2013158800434CFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8A49FE22013158700434CFC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8A49FE92013158700434CFC;
+			remoteInfo = "kairai-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5892391FC3B861C0B6D58F1B /* Pods-kairai-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kairai-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-kairai-iOS/Pods-kairai-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		65CE05F49B5C20ED0FCFCAC7 /* Pods-kairai-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kairai-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-kairai-iOS/Pods-kairai-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		AE08AD9621F5FFE16A9580AC /* Pods_kairai_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kairai_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B819239020162D92001FDD6B /* SensorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SensorDetailViewController.swift; path = Controllers/SensorDetailViewController.swift; sourceTree = "<group>"; };
+		B81923922016350A001FDD6B /* SensorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SensorService.swift; path = Services/SensorService.swift; sourceTree = "<group>"; };
+		B81AC2EC2018CE230038C93B /* StreamApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StreamApi.swift; path = kairaiApi/StreamApi.swift; sourceTree = "<group>"; };
+		B81AC2EE2018D9230038C93B /* ConnectedSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConnectedSensor.swift; path = Models/ConnectedSensor.swift; sourceTree = "<group>"; };
+		B884C9632021E70D001EC74A /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Camera.swift; path = Models/Camera.swift; sourceTree = "<group>"; };
+		B884C968202211ED001EC74A /* base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = base64.swift; path = Helpers/base64.swift; sourceTree = "<group>"; };
+		B89FAF5E20132DC700720CD9 /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabController.swift; path = Controllers/MainTabController.swift; sourceTree = "<group>"; };
+		B89FAF6620132E3200720CD9 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Models/Account.swift; sourceTree = "<group>"; };
+		B89FAF6720132E3200720CD9 /* ProductId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductId.swift; path = Models/ProductId.swift; sourceTree = "<group>"; };
+		B89FAF6820132E3200720CD9 /* PlatformFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlatformFactory.swift; path = Models/PlatformFactory.swift; sourceTree = "<group>"; };
+		B89FAF6920132E3200720CD9 /* SensorFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorFactory.swift; path = Models/SensorFactory.swift; sourceTree = "<group>"; };
+		B89FAF6A20132E3200720CD9 /* Accelerometer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Accelerometer.swift; path = Models/Accelerometer.swift; sourceTree = "<group>"; };
+		B89FAF6B20132E3200720CD9 /* Sensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sensor.swift; path = Models/Sensor.swift; sourceTree = "<group>"; };
+		B89FAF6C20132E3200720CD9 /* PlatformList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlatformList.swift; path = Models/PlatformList.swift; sourceTree = "<group>"; };
+		B89FAF6D20132E3200720CD9 /* SensorStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorStatus.swift; path = Models/SensorStatus.swift; sourceTree = "<group>"; };
+		B89FAF6E20132E3200720CD9 /* SensorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorType.swift; path = Models/SensorType.swift; sourceTree = "<group>"; };
+		B89FAF6F20132E3200720CD9 /* Platform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Platform.swift; path = Models/Platform.swift; sourceTree = "<group>"; };
+		B89FAF7020132E3200720CD9 /* AccountFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountFactory.swift; path = Models/AccountFactory.swift; sourceTree = "<group>"; };
+		B89FAF7120132E3200720CD9 /* CMSensor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CMSensor.swift; path = Models/CMSensor.swift; sourceTree = "<group>"; };
+		B89FAF7F20132E4D00720CD9 /* AccountService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccountService.swift; path = Services/AccountService.swift; sourceTree = "<group>"; };
+		B89FAF8020132E4D00720CD9 /* PlatformService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlatformService.swift; path = Services/PlatformService.swift; sourceTree = "<group>"; };
+		B89FAF8520132E5E00720CD9 /* SensorListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorListView.swift; path = Views/SensorListView.swift; sourceTree = "<group>"; };
+		B89FAF8920132E7B00720CD9 /* KairaiApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KairaiApi.swift; path = kairaiApi/KairaiApi.swift; sourceTree = "<group>"; };
+		B89FAF8A20132E7B00720CD9 /* KairaiApiError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KairaiApiError.swift; path = kairaiApi/KairaiApiError.swift; sourceTree = "<group>"; };
+		B89FAF8B20132E7B00720CD9 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = kairaiApi/Resource.swift; sourceTree = "<group>"; };
+		B89FAF8C20132E7B00720CD9 /* KairaiResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KairaiResource.swift; path = kairaiApi/KairaiResource.swift; sourceTree = "<group>"; };
+		B89FAF9120132EBC00720CD9 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		B89FAF932013309C00720CD9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		B89FAF942013309D00720CD9 /* SensorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorsViewController.swift; path = Controllers/SensorsViewController.swift; sourceTree = "<group>"; };
+		B89FAF972013334C00720CD9 /* SensorListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SensorListViewCell.swift; path = Views/SensorListViewCell.swift; sourceTree = "<group>"; };
+		B8A49FEA2013158700434CFC /* kairai-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kairai-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A49FED2013158700434CFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B8A49FF42013158700434CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B8A49FF62013158800434CFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8A49FF92013158800434CFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B8A49FFB2013158800434CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8A4A0002013158800434CFC /* kairai-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kairai-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A4A0042013158800434CFC /* kairai_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kairai_iOSTests.swift; sourceTree = "<group>"; };
+		B8A4A0062013158800434CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8A4A00B2013158800434CFC /* kairai-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kairai-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A4A00F2013158800434CFC /* kairai_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kairai_iOSUITests.swift; sourceTree = "<group>"; };
+		B8A4A0112013158800434CFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8A49FE72013158700434CFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0A1303DDA8480D2738157B6 /* Pods_kairai_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8A49FFD2013158800434CFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8A4A0082013158800434CFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5B68EA241B024F4B5A082BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE08AD9621F5FFE16A9580AC /* Pods_kairai_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B684C4F2C20A1049DEBBBC5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				65CE05F49B5C20ED0FCFCAC7 /* Pods-kairai-iOS.debug.xcconfig */,
+				5892391FC3B861C0B6D58F1B /* Pods-kairai-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B884C967202211B9001EC74A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B884C968202211ED001EC74A /* base64.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		B89FAF5C20132DB100720CD9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B89FAF932013309C00720CD9 /* LoginViewController.swift */,
+				B89FAF942013309D00720CD9 /* SensorsViewController.swift */,
+				B89FAF5E20132DC700720CD9 /* MainTabController.swift */,
+				B819239020162D92001FDD6B /* SensorDetailViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B89FAF6520132E2300720CD9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B89FAF6A20132E3200720CD9 /* Accelerometer.swift */,
+				B89FAF6620132E3200720CD9 /* Account.swift */,
+				B89FAF7020132E3200720CD9 /* AccountFactory.swift */,
+				B89FAF7120132E3200720CD9 /* CMSensor.swift */,
+				B89FAF6F20132E3200720CD9 /* Platform.swift */,
+				B89FAF6820132E3200720CD9 /* PlatformFactory.swift */,
+				B89FAF6720132E3200720CD9 /* ProductId.swift */,
+				B89FAF6C20132E3200720CD9 /* PlatformList.swift */,
+				B89FAF6B20132E3200720CD9 /* Sensor.swift */,
+				B89FAF6920132E3200720CD9 /* SensorFactory.swift */,
+				B89FAF6D20132E3200720CD9 /* SensorStatus.swift */,
+				B89FAF6E20132E3200720CD9 /* SensorType.swift */,
+				B81AC2EE2018D9230038C93B /* ConnectedSensor.swift */,
+				B884C9632021E70D001EC74A /* Camera.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B89FAF7E20132E3A00720CD9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B89FAF7F20132E4D00720CD9 /* AccountService.swift */,
+				B89FAF8020132E4D00720CD9 /* PlatformService.swift */,
+				B81923922016350A001FDD6B /* SensorService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		B89FAF8320132E5200720CD9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B89FAF972013334C00720CD9 /* SensorListViewCell.swift */,
+				B89FAF8520132E5E00720CD9 /* SensorListView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B89FAF8820132E6800720CD9 /* kairaiApi */ = {
+			isa = PBXGroup;
+			children = (
+				B89FAF8920132E7B00720CD9 /* KairaiApi.swift */,
+				B89FAF8A20132E7B00720CD9 /* KairaiApiError.swift */,
+				B89FAF8C20132E7B00720CD9 /* KairaiResource.swift */,
+				B89FAF8B20132E7B00720CD9 /* Resource.swift */,
+				B81AC2EC2018CE230038C93B /* StreamApi.swift */,
+			);
+			name = kairaiApi;
+			sourceTree = "<group>";
+		};
+		B8A49FE12013158700434CFC = {
+			isa = PBXGroup;
+			children = (
+				B8A49FEC2013158700434CFC /* kairai-iOS */,
+				B8A4A0032013158800434CFC /* kairai-iOSTests */,
+				B8A4A00E2013158800434CFC /* kairai-iOSUITests */,
+				B8A49FEB2013158700434CFC /* Products */,
+				B684C4F2C20A1049DEBBBC5F /* Pods */,
+				A5B68EA241B024F4B5A082BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B8A49FEB2013158700434CFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8A49FEA2013158700434CFC /* kairai-iOS.app */,
+				B8A4A0002013158800434CFC /* kairai-iOSTests.xctest */,
+				B8A4A00B2013158800434CFC /* kairai-iOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8A49FEC2013158700434CFC /* kairai-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B884C967202211B9001EC74A /* Helpers */,
+				B89FAF9120132EBC00720CD9 /* Error.swift */,
+				B89FAF8820132E6800720CD9 /* kairaiApi */,
+				B89FAF8320132E5200720CD9 /* Views */,
+				B89FAF7E20132E3A00720CD9 /* Services */,
+				B89FAF6520132E2300720CD9 /* Models */,
+				B89FAF5C20132DB100720CD9 /* Controllers */,
+				B8A49FED2013158700434CFC /* AppDelegate.swift */,
+				B8A49FF32013158700434CFC /* Main.storyboard */,
+				B8A49FF62013158800434CFC /* Assets.xcassets */,
+				B8A49FF82013158800434CFC /* LaunchScreen.storyboard */,
+				B8A49FFB2013158800434CFC /* Info.plist */,
+			);
+			path = "kairai-iOS";
+			sourceTree = "<group>";
+		};
+		B8A4A0032013158800434CFC /* kairai-iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				B8A4A0042013158800434CFC /* kairai_iOSTests.swift */,
+				B8A4A0062013158800434CFC /* Info.plist */,
+			);
+			path = "kairai-iOSTests";
+			sourceTree = "<group>";
+		};
+		B8A4A00E2013158800434CFC /* kairai-iOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B8A4A00F2013158800434CFC /* kairai_iOSUITests.swift */,
+				B8A4A0112013158800434CFC /* Info.plist */,
+			);
+			path = "kairai-iOSUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8A49FE92013158700434CFC /* kairai-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8A4A0142013158800434CFC /* Build configuration list for PBXNativeTarget "kairai-iOS" */;
+			buildPhases = (
+				C7DB7D319E54BDE17DE777C3 /* [CP] Check Pods Manifest.lock */,
+				B8A49FE62013158700434CFC /* Sources */,
+				B8A49FE72013158700434CFC /* Frameworks */,
+				B8A49FE82013158700434CFC /* Resources */,
+				6B30641707532055FDF4702D /* [CP] Embed Pods Frameworks */,
+				1B4BF053DC2B3390457A5CA1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kairai-iOS";
+			productName = "kairai-iOS";
+			productReference = B8A49FEA2013158700434CFC /* kairai-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B8A49FFF2013158800434CFC /* kairai-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8A4A0172013158800434CFC /* Build configuration list for PBXNativeTarget "kairai-iOSTests" */;
+			buildPhases = (
+				B8A49FFC2013158800434CFC /* Sources */,
+				B8A49FFD2013158800434CFC /* Frameworks */,
+				B8A49FFE2013158800434CFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8A4A0022013158800434CFC /* PBXTargetDependency */,
+			);
+			name = "kairai-iOSTests";
+			productName = "kairai-iOSTests";
+			productReference = B8A4A0002013158800434CFC /* kairai-iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B8A4A00A2013158800434CFC /* kairai-iOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8A4A01A2013158800434CFC /* Build configuration list for PBXNativeTarget "kairai-iOSUITests" */;
+			buildPhases = (
+				B8A4A0072013158800434CFC /* Sources */,
+				B8A4A0082013158800434CFC /* Frameworks */,
+				B8A4A0092013158800434CFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8A4A00D2013158800434CFC /* PBXTargetDependency */,
+			);
+			name = "kairai-iOSUITests";
+			productName = "kairai-iOSUITests";
+			productReference = B8A4A00B2013158800434CFC /* kairai-iOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8A49FE22013158700434CFC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "watanabe kyota";
+				TargetAttributes = {
+					B8A49FE92013158700434CFC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					B8A49FFF2013158800434CFC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B8A49FE92013158700434CFC;
+					};
+					B8A4A00A2013158800434CFC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B8A49FE92013158700434CFC;
+					};
+				};
+			};
+			buildConfigurationList = B8A49FE52013158700434CFC /* Build configuration list for PBXProject "kairai-iOS" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8A49FE12013158700434CFC;
+			productRefGroup = B8A49FEB2013158700434CFC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8A49FE92013158700434CFC /* kairai-iOS */,
+				B8A49FFF2013158800434CFC /* kairai-iOSTests */,
+				B8A4A00A2013158800434CFC /* kairai-iOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8A49FE82013158700434CFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8A49FFA2013158800434CFC /* LaunchScreen.storyboard in Resources */,
+				B8A49FF72013158800434CFC /* Assets.xcassets in Resources */,
+				B8A49FF52013158700434CFC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8A49FFE2013158800434CFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8A4A0092013158800434CFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B4BF053DC2B3390457A5CA1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kairai-iOS/Pods-kairai-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B30641707532055FDF4702D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-kairai-iOS/Pods-kairai-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-kairai-iOS/Pods-kairai-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7DB7D319E54BDE17DE777C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kairai-iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8A49FE62013158700434CFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B89FAF7B20132E3300720CD9 /* Platform.swift in Sources */,
+				B89FAF7620132E3300720CD9 /* Accelerometer.swift in Sources */,
+				B819239120162D93001FDD6B /* SensorDetailViewController.swift in Sources */,
+				B89FAF7720132E3300720CD9 /* Sensor.swift in Sources */,
+				B89FAF7D20132E3300720CD9 /* CMSensor.swift in Sources */,
+				B89FAF7520132E3300720CD9 /* SensorFactory.swift in Sources */,
+				B89FAF7220132E3300720CD9 /* Account.swift in Sources */,
+				B89FAF7320132E3300720CD9 /* ProductId.swift in Sources */,
+				B89FAF7420132E3300720CD9 /* PlatformFactory.swift in Sources */,
+				B89FAF8F20132E7B00720CD9 /* Resource.swift in Sources */,
+				B89FAF8720132E5F00720CD9 /* SensorListView.swift in Sources */,
+				B89FAF8220132E4E00720CD9 /* PlatformService.swift in Sources */,
+				B89FAF952013309D00720CD9 /* LoginViewController.swift in Sources */,
+				B89FAF8D20132E7B00720CD9 /* KairaiApi.swift in Sources */,
+				B89FAF8120132E4E00720CD9 /* AccountService.swift in Sources */,
+				B89FAF7920132E3300720CD9 /* SensorStatus.swift in Sources */,
+				B89FAF8E20132E7B00720CD9 /* KairaiApiError.swift in Sources */,
+				B81923932016350A001FDD6B /* SensorService.swift in Sources */,
+				B8A49FEE2013158700434CFC /* AppDelegate.swift in Sources */,
+				B89FAF7C20132E3300720CD9 /* AccountFactory.swift in Sources */,
+				B89FAF6120132DC700720CD9 /* MainTabController.swift in Sources */,
+				B89FAF7820132E3300720CD9 /* PlatformList.swift in Sources */,
+				B81AC2EF2018D9230038C93B /* ConnectedSensor.swift in Sources */,
+				B89FAF962013309D00720CD9 /* SensorsViewController.swift in Sources */,
+				B89FAF7A20132E3300720CD9 /* SensorType.swift in Sources */,
+				B81AC2ED2018CE230038C93B /* StreamApi.swift in Sources */,
+				B89FAF9220132EBD00720CD9 /* Error.swift in Sources */,
+				B884C9642021E70E001EC74A /* Camera.swift in Sources */,
+				B89FAF982013334D00720CD9 /* SensorListViewCell.swift in Sources */,
+				B884C969202211ED001EC74A /* base64.swift in Sources */,
+				B89FAF9020132E7B00720CD9 /* KairaiResource.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8A49FFC2013158800434CFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8A4A0052013158800434CFC /* kairai_iOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8A4A0072013158800434CFC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8A4A0102013158800434CFC /* kairai_iOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B8A4A0022013158800434CFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8A49FE92013158700434CFC /* kairai-iOS */;
+			targetProxy = B8A4A0012013158800434CFC /* PBXContainerItemProxy */;
+		};
+		B8A4A00D2013158800434CFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8A49FE92013158700434CFC /* kairai-iOS */;
+			targetProxy = B8A4A00C2013158800434CFC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B8A49FF32013158700434CFC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8A49FF42013158700434CFC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B8A49FF82013158800434CFC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B8A49FF92013158800434CFC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B8A4A0122013158800434CFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8A4A0132013158800434CFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8A4A0152013158800434CFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65CE05F49B5C20ED0FCFCAC7 /* Pods-kairai-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNEXNH4Z26;
+				INFOPLIST_FILE = "kairai-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyotaw.kairai-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8A4A0162013158800434CFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5892391FC3B861C0B6D58F1B /* Pods-kairai-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNEXNH4Z26;
+				INFOPLIST_FILE = "kairai-iOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyotaw.kairai-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B8A4A0182013158800434CFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNEXNH4Z26;
+				INFOPLIST_FILE = "kairai-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyotaw.kairai-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kairai-iOS.app/kairai-iOS";
+			};
+			name = Debug;
+		};
+		B8A4A0192013158800434CFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNEXNH4Z26;
+				INFOPLIST_FILE = "kairai-iOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyotaw.kairai-iOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kairai-iOS.app/kairai-iOS";
+			};
+			name = Release;
+		};
+		B8A4A01B2013158800434CFC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNEXNH4Z26;
+				INFOPLIST_FILE = "kairai-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyotaw.kairai-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "kairai-iOS";
+			};
+			name = Debug;
+		};
+		B8A4A01C2013158800434CFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNEXNH4Z26;
+				INFOPLIST_FILE = "kairai-iOSUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kyotaw.kairai-iOSUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "kairai-iOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8A49FE52013158700434CFC /* Build configuration list for PBXProject "kairai-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8A4A0122013158800434CFC /* Debug */,
+				B8A4A0132013158800434CFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8A4A0142013158800434CFC /* Build configuration list for PBXNativeTarget "kairai-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8A4A0152013158800434CFC /* Debug */,
+				B8A4A0162013158800434CFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8A4A0172013158800434CFC /* Build configuration list for PBXNativeTarget "kairai-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8A4A0182013158800434CFC /* Debug */,
+				B8A4A0192013158800434CFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8A4A01A2013158800434CFC /* Build configuration list for PBXNativeTarget "kairai-iOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8A4A01B2013158800434CFC /* Debug */,
+				B8A4A01C2013158800434CFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B8A49FE22013158700434CFC /* Project object */;
+}
