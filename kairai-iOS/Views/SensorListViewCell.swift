@@ -46,7 +46,7 @@ class SensorListViewCell : UITableViewCell, SensorDelegate {
         self.sensor = sensor
         sensor.delegate = self
         self.sensorNameLabel.text = sensor.name
-        self.dataAmountLabel.text = sensor.transferredBytes.description
+        self.dataAmountLabel.text = 0.description
         self.dataUnitLabel.text = "MB"
         self.sensorStatus.text = sensor.status.currentState
         self.actions.removeAll()

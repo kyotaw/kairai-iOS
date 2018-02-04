@@ -16,7 +16,7 @@ internal class Resource {
     
     static func get(
         _ url: String,
-        params: Dictionary<String, String>=[:],
+        params: Dictionary<String, Any>=[:],
         headers: Dictionary<String, String>=[:],
         callback: @escaping KairaiCallback) {
         
@@ -34,7 +34,7 @@ internal class Resource {
     
     static func post(
         url: String,
-        params: Dictionary<String, String>,
+        params: Dictionary<String, Any>,
         queryParams: Dictionary<String, String>=[:],
         headers: Dictionary<String, String>=[:],
         callback: @escaping KairaiCallback) {

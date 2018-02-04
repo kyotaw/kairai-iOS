@@ -11,10 +11,10 @@ import UIKit
 
 class Camera : ConnectedSensor, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    init(id: ProductId, transferredBytes: Int) {
+    init(id: ProductId, spec: Dictionary<String,Any>) {
         self.picker = UIImagePickerController()
         self.picker.sourceType = UIImagePickerControllerSourceType.camera
-        super.init(productId: id, transferredBytes: transferredBytes)
+        super.init(productId: id, spec: spec)
         self._type = .camera
     }
     

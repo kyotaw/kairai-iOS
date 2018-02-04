@@ -9,8 +9,8 @@
 import Foundation
 
 class ConnectedSensor : Sensor {
-    override init(productId: ProductId, transferredBytes: Int) {
-        super.init(productId: productId, transferredBytes: transferredBytes)
+    override init(productId: ProductId, spec: Dictionary<String,Any>) {
+        super.init(productId: productId, spec: spec)
         self.streamApi = KairaiStreamApi(
             dataSourceHash: productId.hash,
             onConnect: self.onConnect,

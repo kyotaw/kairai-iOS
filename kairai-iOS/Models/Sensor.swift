@@ -13,11 +13,11 @@ protocol SensorDelegate {
 }
 
 class Sensor : NSObject{
-    init(productId: ProductId, transferredBytes: Int) {
+    init(productId: ProductId, spec: Dictionary<String,Any>) {
         self._productId = productId
         self._status = SensorStatus()
         self._type = .unavailableSensor
-        self._transferredBytes = transferredBytes
+        self._spec = spec
     }
     
     var productId: ProductId {
@@ -36,17 +36,20 @@ class Sensor : NSObject{
         return self._type.rawValue
     }
     
-    var isAvailable: Bool {
-        return false
+    var spec: Dictionary<String,Any> {
+        return self._spec
+    }
+
+    func setSpec(name: String, value: Any) {
+        self._spec[name] = value
     }
     
-    var transferredBytes: Int {
-        get {
-            return self._transferredBytes
-        }
-        set {
-            self._transferredBytes = newValue
-        }
+    func getSpec(name: String) -> Any {
+        return self._spec[name]
+    }
+    
+    var isAvailable: Bool {
+        return false
     }
     
     func startDataGeneration() {
@@ -62,7 +65,7 @@ class Sensor : NSObject{
     let _productId: ProductId
     var _status: SensorStatus
     var _type: SensorType
-    var _transferredBytes: Int
+    var _spec: Dictionary<String,Any>
     
     var delegate: SensorDelegate?
 }

@@ -33,8 +33,9 @@ public class KairaiApi {
         name: String,
         sourceType: String,
         monoHash: String,
+        spec: Dictionary<String,Any>,
         callback: @escaping KairaiCallback) {
         
-        KairaiResource.registerDataSource(modelNumber: productId.modelNumber, serialNumber: productId.serialNumber, vendorName: productId.vendorName, name: name, sourceType: sourceType, monoHash: monoHash, callback: callback)
+        KairaiResource.registerDataSource(modelNumber: productId.modelNumber, serialNumber: productId.serialNumber, vendorName: productId.vendorName, name: name, sourceType: sourceType, monoHash: monoHash, spec: spec, callback: callback)
     }
 }

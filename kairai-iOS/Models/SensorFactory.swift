@@ -28,20 +28,25 @@ class SensorFactory {
         guard let type = data["sourceType"].string else {
             return nil
         }
-        guard let transferredBytes = data["transferredBytes"].int else {
-            return nil
-        }
         
         let productId = ProductId(modelNumber: modelNumber, serialNumber: serialNumber, vendorName: vendorName, hash: hash)
-        return SensorFactory.create(sourceType: type, productId: productId, transferredBytes: transferredBytes)
+        let sensor = SensorFactory.create(sourceType: type, productId: productId, modelName: "")
+        
+        if let spec = data["spec"].dictionary {
+            for (name, value) in spec {
+                sensor?.setSpec(name: name, value: value.object)
+            }
+        }
+        
+        return sensor;
     }
     
-    static func create(sourceType: String, productId: ProductId, transferredBytes: Int) -> ConnectedSensor? {
+    static func create(sourceType: String, productId: ProductId, modelName: String) -> ConnectedSensor? {
         switch sourceType {
         case SensorType.accelerometer.rawValue:
-            return CMAccelerometer(id: productId, transferredBytes: transferredBytes)
+            return Accelerometer(id: productId, spec: getAccelerometerSpec(modelName: modelName))
         case SensorType.barometer.rawValue:
-            return nil
+            return Barometer(id: productId, spec: getBarometerSpec(modelName: modelName))
         case SensorType.beacon.rawValue:
             return nil
         case SensorType.brightnessSensor.rawValue:
@@ -61,7 +66,7 @@ class SensorFactory {
         case SensorType.nfc.rawValue:
             return nil
         case SensorType.camera.rawValue:
-            return Camera(id: productId, transferredBytes: transferredBytes)
+            return Camera(id: productId, spec: getCameraSpec(modelName: modelName))
         case SensorType.proximitySensor.rawValue:
             return nil
         default:

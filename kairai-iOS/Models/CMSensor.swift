@@ -12,9 +12,9 @@ import CoreMotion
 
 class CMSensor : ConnectedSensor {
 
-    init(id: ProductId, transferredBytes: Int) {
+    init(id: ProductId, spec: Dictionary<String,Any>) {
         self.motionManager = CMMotionManager()
-        super.init(productId: id, transferredBytes: transferredBytes)
+        super.init(productId: id, spec: spec)
     }
     
     let motionManager: CMMotionManager

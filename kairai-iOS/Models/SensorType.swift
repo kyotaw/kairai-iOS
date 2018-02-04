@@ -10,22 +10,22 @@ import Foundation
 
 
 enum SensorType : String {
-    case fingerprintSensor = "FingerprintSensor"
-    case proximitySensor = "ProximitySensor"
-    case gps = "GPS"
-    case accelerometer = "Accelerometer"
-    case gyroscope = "Gyroscope"
-    case magneticSensor = "MagneticSensor"
-    case led = "LED"
-    case brightnessSensor = "BrightnessSensor"
-    case vibrator = "Vibrator"
-    case microphone = "Microphone"
-    case speaker = "Speaker"
-    case camera = "Camera"
-    case beacon = "Beacon"
-    case nfc = "NFC"
-    case barometer = "Barometer"
-    case unavailableSensor = "UnavailableSensor"
+    case fingerprintSensor = "fingerprintSensor"
+    case proximitySensor = "proximitySensor"
+    case gps = "gps"
+    case accelerometer = "accelerometer"
+    case gyroscope = "gyroscope"
+    case magneticSensor = "magneticSensor"
+    case led = "led"
+    case brightnessSensor = "brightnessSensor"
+    case vibrator = "vibrator"
+    case microphone = "microphone"
+    case speaker = "speaker"
+    case camera = "camera"
+    case beacon = "beacon"
+    case nfc = "nfc"
+    case barometer = "barometer"
+    case unavailableSensor = "unavailableSensor"
     
     static var list: [SensorType] {
         return [

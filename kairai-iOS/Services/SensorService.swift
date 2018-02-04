@@ -11,7 +11,12 @@ import Foundation
 class SenserService {
     
     static func regsiterSensor(sensor: Sensor, platform: Platform, callback: @escaping (MetaError?) -> Void) {
-        KairaiApi.registerDataSource(productId: sensor.productId, name: sensor.name, sourceType: sensor.type.rawValue, monoHash: platform.productId.hash) { err, data in
+        KairaiApi.registerDataSource(
+            productId: sensor.productId,
+            name: sensor.name,
+            sourceType: sensor.type.rawValue,
+            monoHash: platform.productId.hash,
+            spec: sensor.spec) { err, data in
             if err != nil {
                 callback(MetaError(errorType: .registerSensorFailed))
             } else {

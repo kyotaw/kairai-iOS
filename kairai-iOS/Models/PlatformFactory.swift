@@ -27,7 +27,7 @@ class PlatformFactory {
         
         var sensors = [ConnectedSensor]()
         for type in SensorType.list {
-            if let sensor = SensorFactory.create(sourceType: type.rawValue, productId: id, transferredBytes: 0) {
+            if let sensor = SensorFactory.create(sourceType: type.rawValue, productId: id, modelName: modelName) {
                 sensors.append(sensor)
             }
         }
@@ -69,10 +69,15 @@ class PlatformFactory {
                 sensorList.remove(at: sensorList.index(of: sensor.type)!)
             }
         }
+        
+        var modelName = modelNumber
+        if let name = PlatformList[modelNumber] {
+            modelName = name
+        }
         // not registered sensors
         for type in sensorList {
             let sensorId = ProductId(modelNumber: modelNumber + type.rawValue, serialNumber: serialNumber, vendorName: vendorName)
-            if let sensor = SensorFactory.create(sourceType: type.rawValue, productId: sensorId, transferredBytes: 0) {
+            if let sensor = SensorFactory.create(sourceType: type.rawValue, productId: sensorId, modelName: modelName) {
                 sensors.append(sensor)
             }
         }

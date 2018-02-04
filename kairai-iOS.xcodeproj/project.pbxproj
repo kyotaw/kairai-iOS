@@ -13,6 +13,10 @@
 		B81AC2EF2018D9230038C93B /* ConnectedSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81AC2EE2018D9230038C93B /* ConnectedSensor.swift */; };
 		B884C9642021E70E001EC74A /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C9632021E70D001EC74A /* Camera.swift */; };
 		B884C969202211ED001EC74A /* base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C968202211ED001EC74A /* base64.swift */; };
+		B884C96B2024B1B4001EC74A /* CameraSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C96A2024B1B3001EC74A /* CameraSpecs.swift */; };
+		B884C96D2024BD04001EC74A /* AccelerometerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C96C2024BD04001EC74A /* AccelerometerSpec.swift */; };
+		B884C96F202588B7001EC74A /* Baromete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C96E202588B6001EC74A /* Baromete.swift */; };
+		B884C9712026CCCE001EC74A /* BarometerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C9702026CCCE001EC74A /* BarometerSpec.swift */; };
 		B89FAF6120132DC700720CD9 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF5E20132DC700720CD9 /* MainTabController.swift */; };
 		B89FAF7220132E3300720CD9 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6620132E3200720CD9 /* Account.swift */; };
 		B89FAF7320132E3300720CD9 /* ProductId.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6720132E3200720CD9 /* ProductId.swift */; };
@@ -73,6 +77,10 @@
 		B81AC2EE2018D9230038C93B /* ConnectedSensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConnectedSensor.swift; path = Models/ConnectedSensor.swift; sourceTree = "<group>"; };
 		B884C9632021E70D001EC74A /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Camera.swift; path = Models/Camera.swift; sourceTree = "<group>"; };
 		B884C968202211ED001EC74A /* base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = base64.swift; path = Helpers/base64.swift; sourceTree = "<group>"; };
+		B884C96A2024B1B3001EC74A /* CameraSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CameraSpecs.swift; path = Models/CameraSpecs.swift; sourceTree = "<group>"; };
+		B884C96C2024BD04001EC74A /* AccelerometerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccelerometerSpec.swift; path = Models/AccelerometerSpec.swift; sourceTree = "<group>"; };
+		B884C96E202588B6001EC74A /* Baromete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Baromete.swift; path = Models/Baromete.swift; sourceTree = "<group>"; };
+		B884C9702026CCCE001EC74A /* BarometerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarometerSpec.swift; path = Models/BarometerSpec.swift; sourceTree = "<group>"; };
 		B89FAF5E20132DC700720CD9 /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabController.swift; path = Controllers/MainTabController.swift; sourceTree = "<group>"; };
 		B89FAF6620132E3200720CD9 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Models/Account.swift; sourceTree = "<group>"; };
 		B89FAF6720132E3200720CD9 /* ProductId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductId.swift; path = Models/ProductId.swift; sourceTree = "<group>"; };
@@ -190,6 +198,10 @@
 				B89FAF6E20132E3200720CD9 /* SensorType.swift */,
 				B81AC2EE2018D9230038C93B /* ConnectedSensor.swift */,
 				B884C9632021E70D001EC74A /* Camera.swift */,
+				B884C96A2024B1B3001EC74A /* CameraSpecs.swift */,
+				B884C96C2024BD04001EC74A /* AccelerometerSpec.swift */,
+				B884C96E202588B6001EC74A /* Baromete.swift */,
+				B884C9702026CCCE001EC74A /* BarometerSpec.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -481,10 +493,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B884C96D2024BD04001EC74A /* AccelerometerSpec.swift in Sources */,
+				B884C96F202588B7001EC74A /* Baromete.swift in Sources */,
 				B89FAF7B20132E3300720CD9 /* Platform.swift in Sources */,
 				B89FAF7620132E3300720CD9 /* Accelerometer.swift in Sources */,
 				B819239120162D93001FDD6B /* SensorDetailViewController.swift in Sources */,
 				B89FAF7720132E3300720CD9 /* Sensor.swift in Sources */,
+				B884C9712026CCCE001EC74A /* BarometerSpec.swift in Sources */,
 				B89FAF7D20132E3300720CD9 /* CMSensor.swift in Sources */,
 				B89FAF7520132E3300720CD9 /* SensorFactory.swift in Sources */,
 				B89FAF7220132E3300720CD9 /* Account.swift in Sources */,
@@ -500,6 +515,7 @@
 				B89FAF8E20132E7B00720CD9 /* KairaiApiError.swift in Sources */,
 				B81923932016350A001FDD6B /* SensorService.swift in Sources */,
 				B8A49FEE2013158700434CFC /* AppDelegate.swift in Sources */,
+				B884C96B2024B1B4001EC74A /* CameraSpecs.swift in Sources */,
 				B89FAF7C20132E3300720CD9 /* AccountFactory.swift in Sources */,
 				B89FAF6120132DC700720CD9 /* MainTabController.swift in Sources */,
 				B89FAF7820132E3300720CD9 /* PlatformList.swift in Sources */,

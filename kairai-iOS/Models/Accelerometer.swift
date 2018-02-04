@@ -12,10 +12,10 @@ import CoreMotion
 import SocketIO
 
 
-class CMAccelerometer : CMSensor {
+class Accelerometer : CMSensor {
     
-    override init(id: ProductId, transferredBytes: Int) {
-        super.init(id: id, transferredBytes: transferredBytes)
+    override init(id: ProductId, spec: Dictionary<String,Any>) {
+        super.init(id: id, spec: spec)
         self._type = .accelerometer
     }
     
@@ -55,12 +55,12 @@ class CMAccelerometer : CMSensor {
         guard let accelZ = data?.acceleration.z else {
             return
         }
-        let data = [
+        let payload = [
             "accelX": accelX,
             "accelY": accelY,
             "accelZ": accelZ
         ]
-        self.send(data: data)
+        self.send(data: payload)
     }
 
 }

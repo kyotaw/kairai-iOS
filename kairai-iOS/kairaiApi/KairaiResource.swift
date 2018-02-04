@@ -59,16 +59,18 @@ internal class KairaiResource : Resource {
         name: String,
         sourceType: String,
         monoHash: String,
+        spec: Dictionary<String,Any>,
         callback: @escaping KairaiCallback) {
         
         let endPoint = [Resource.url, "monos", monoHash, "data_sources"].joined(separator: "/")
-        let params = [
+        let params: [String:Any] = [
             "modelNumber": modelNumber,
             "serialNumber": serialNumber,
             "vendorName": vendorName,
             "name": name,
-            "sourceType": sourceType
-        ]
+            "sourceType": sourceType,
+            "spec": spec
+            ]
         self.post(url: endPoint, params: params, callback: callback)
     }
 }
