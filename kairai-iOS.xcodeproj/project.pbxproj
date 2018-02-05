@@ -17,6 +17,8 @@
 		B884C96D2024BD04001EC74A /* AccelerometerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C96C2024BD04001EC74A /* AccelerometerSpec.swift */; };
 		B884C96F202588B7001EC74A /* Baromete.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C96E202588B6001EC74A /* Baromete.swift */; };
 		B884C9712026CCCE001EC74A /* BarometerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C9702026CCCE001EC74A /* BarometerSpec.swift */; };
+		B884C97320288246001EC74A /* Gps.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C97220288246001EC74A /* Gps.swift */; };
+		B884C9752028A324001EC74A /* GpsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B884C9742028A324001EC74A /* GpsSpec.swift */; };
 		B89FAF6120132DC700720CD9 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF5E20132DC700720CD9 /* MainTabController.swift */; };
 		B89FAF7220132E3300720CD9 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6620132E3200720CD9 /* Account.swift */; };
 		B89FAF7320132E3300720CD9 /* ProductId.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89FAF6720132E3200720CD9 /* ProductId.swift */; };
@@ -81,6 +83,8 @@
 		B884C96C2024BD04001EC74A /* AccelerometerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccelerometerSpec.swift; path = Models/AccelerometerSpec.swift; sourceTree = "<group>"; };
 		B884C96E202588B6001EC74A /* Baromete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Baromete.swift; path = Models/Baromete.swift; sourceTree = "<group>"; };
 		B884C9702026CCCE001EC74A /* BarometerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BarometerSpec.swift; path = Models/BarometerSpec.swift; sourceTree = "<group>"; };
+		B884C97220288246001EC74A /* Gps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Gps.swift; path = Models/Gps.swift; sourceTree = "<group>"; };
+		B884C9742028A324001EC74A /* GpsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GpsSpec.swift; path = Models/GpsSpec.swift; sourceTree = "<group>"; };
 		B89FAF5E20132DC700720CD9 /* MainTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabController.swift; path = Controllers/MainTabController.swift; sourceTree = "<group>"; };
 		B89FAF6620132E3200720CD9 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = Models/Account.swift; sourceTree = "<group>"; };
 		B89FAF6720132E3200720CD9 /* ProductId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductId.swift; path = Models/ProductId.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 				B884C96C2024BD04001EC74A /* AccelerometerSpec.swift */,
 				B884C96E202588B6001EC74A /* Baromete.swift */,
 				B884C9702026CCCE001EC74A /* BarometerSpec.swift */,
+				B884C97220288246001EC74A /* Gps.swift */,
+				B884C9742028A324001EC74A /* GpsSpec.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -368,6 +374,11 @@
 					B8A49FE92013158700434CFC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					B8A49FFF2013158800434CFC = {
 						CreatedOnToolsVersion = 9.2;
@@ -503,6 +514,7 @@
 				B89FAF7D20132E3300720CD9 /* CMSensor.swift in Sources */,
 				B89FAF7520132E3300720CD9 /* SensorFactory.swift in Sources */,
 				B89FAF7220132E3300720CD9 /* Account.swift in Sources */,
+				B884C97320288246001EC74A /* Gps.swift in Sources */,
 				B89FAF7320132E3300720CD9 /* ProductId.swift in Sources */,
 				B89FAF7420132E3300720CD9 /* PlatformFactory.swift in Sources */,
 				B89FAF8F20132E7B00720CD9 /* Resource.swift in Sources */,
@@ -527,6 +539,7 @@
 				B884C9642021E70E001EC74A /* Camera.swift in Sources */,
 				B89FAF982013334D00720CD9 /* SensorListViewCell.swift in Sources */,
 				B884C969202211ED001EC74A /* base64.swift in Sources */,
+				B884C9752028A324001EC74A /* GpsSpec.swift in Sources */,
 				B89FAF9020132E7B00720CD9 /* KairaiResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

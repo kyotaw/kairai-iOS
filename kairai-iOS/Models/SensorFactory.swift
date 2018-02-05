@@ -54,7 +54,7 @@ class SensorFactory {
         case SensorType.fingerprintSensor.rawValue:
             return nil
         case SensorType.gps.rawValue:
-            return nil
+            return Gps(id: productId, spec: getGpsSpec(modelName: modelName))
         case SensorType.gyroscope.rawValue:
             return nil
         case SensorType.led.rawValue:

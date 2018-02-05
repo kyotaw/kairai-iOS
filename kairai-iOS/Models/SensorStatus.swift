@@ -26,7 +26,6 @@ enum TransferState : String {
 enum RegisterState : String {
     case notRegistered = "Not Registered"
     case registered = "Registered"
-    case banned = "Banned"
 }
 
 
@@ -36,12 +35,14 @@ class SensorStatus {
         self.connState = .offline
         self.transState = .hold
         self.regState = .notRegistered
+        self.hasPermission = true
     }
     
     init(connState: ConnectionState, transState: TransferState, regState: RegisterState) {
         self.connState = connState
         self.transState = transState
         self.regState = regState
+        self.hasPermission = true
     }
     
     var connectionState: ConnectionState {
@@ -109,4 +110,5 @@ class SensorStatus {
     var connState: ConnectionState
     var transState: TransferState
     var regState: RegisterState
+    var hasPermission: Bool
 }

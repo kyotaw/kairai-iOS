@@ -11,7 +11,6 @@ import CoreMotion
 
 import SocketIO
 
-
 class Barometer : CMSensor {
     
     override init(id: ProductId, spec: Dictionary<String,Any>) {

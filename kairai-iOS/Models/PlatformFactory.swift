@@ -78,7 +78,9 @@ class PlatformFactory {
         for type in sensorList {
             let sensorId = ProductId(modelNumber: modelNumber + type.rawValue, serialNumber: serialNumber, vendorName: vendorName)
             if let sensor = SensorFactory.create(sourceType: type.rawValue, productId: sensorId, modelName: modelName) {
-                sensors.append(sensor)
+                if sensor.isAvailable {
+                    sensors.append(sensor)
+                }
             }
         }
         return Platform(id: productId, name: name, sensors: sensors)

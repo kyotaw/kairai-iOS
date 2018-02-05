@@ -48,7 +48,7 @@ class SensorListViewCell : UITableViewCell, SensorDelegate {
         self.sensorNameLabel.text = sensor.name
         self.dataAmountLabel.text = 0.description
         self.dataUnitLabel.text = "MB"
-        self.sensorStatus.text = sensor.status.currentState
+        self.sensorStatus.text = sensor.status.hasPermission ? sensor.status.currentState : "No Permission"
         self.actions.removeAll()
         
         if sensor.status.isOffline && sensor.status.isRegistered {

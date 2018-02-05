@@ -2,8 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSCameraUsageDescription</key>
-	<string>Use camera to take picture</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Need GPS access to notify loaction to ther Kairai API server</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -22,13 +22,24 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Need camera access for uploading pictures</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Need GPS access to notify loaction to ther Kairai API server</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Need GPS access to notify loaction to ther Kairai API server</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
-		<string>armv7</string>
+		<string>location-services</string>
+		<string>gps</string>
 	</array>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
