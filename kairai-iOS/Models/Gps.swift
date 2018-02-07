@@ -11,31 +11,20 @@ import CoreLocation
 
 import SocketIO
 
-class Gps : ConnectedSensor, CLLocationManagerDelegate {
+class Gps : ConnectedSensor, LocationManagerDelegate {
     
     init(id: ProductId, spec: Dictionary<String,Any>) {
         super.init(productId: id, spec: spec)
         self._type = .gps
-        
-        self.locationManager.allowsBackgroundLocationUpdates = true
-        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.distanceFilter = 1
         self.locationManager.delegate = self
-    }
-    
-    func setAccuracy(accuracy: CLLocationAccuracy) {
-        self.locationManager.desiredAccuracy = accuracy
-    }
-    
-    func setDistanceFilter(distanceFilter: Double) {
-        self.locationManager.distanceFilter = distanceFilter
+        self.locationManager.startUpdatingLocation() // get current location
     }
 
     override var isAvailable: Bool {
-        if !CLLocationManager.locationServicesEnabled() {
+        if !self.locationManager.isAvailable {
             return false
         }
-        self.updatePermission(status: CLLocationManager.authorizationStatus())
+        self.updatePermission(status: self.locationManager.authorizationStatus)
         return true
     }
     
@@ -50,6 +39,7 @@ class Gps : ConnectedSensor, CLLocationManagerDelegate {
     
     override func onStart(data: StartData) {
         if self.status.isReady {
+            self.locationManager.stopMonitoringSignificantLocationChanges()
             self.startDataGeneration()
         }
     }
@@ -57,27 +47,43 @@ class Gps : ConnectedSensor, CLLocationManagerDelegate {
     override func onStop(data: StopData) {
         if self.status.isActive {
             self.stopDataGeneration()
+            self.locationManager.startMonitoringSignificantLocationChanges()
         }
     }
     
-    // CLLocationManagerDelegate
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location : CLLocation = locations.last!;
+    var currentLocation: Location? {
+        return self.locationManager.currentLocation
     }
     
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    // LocationDelegate
+    
+    func updatedLocations(locations: [CLLocation]) {
+        if self.status.isActive {
+            let location : CLLocation = locations.last!
+            let data: [String:Any] = [
+                "latitude": location.coordinate.latitude,
+                "longitude": location.coordinate.longitude,
+                "timestamp": timestamp()
+            ]
+            self.send(data: data)
+        } else {
+            // completed filling current location so switch to significant-location mode.
+            self.locationManager.stopUpdatingLocation()
+            self.locationManager.startMonitoringSignificantLocationChanges()
+        }
     }
     
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    func updatedAuthorization(status: CLAuthorizationStatus) {
         self.updatePermission(status: status)
         self.delegate?.changedState(sensor: self)
     }
     
+    func failedWithError(error: Error) {
+    }
+
     fileprivate func updatePermission(status: CLAuthorizationStatus) {
         switch CLLocationManager.authorizationStatus() {
         case .notDetermined:
-            self.locationManager.requestWhenInUseAuthorization()
             self.status.hasPermission = false
             break
         case .denied:
@@ -94,5 +100,5 @@ class Gps : ConnectedSensor, CLLocationManagerDelegate {
         }
     }
     
-    let locationManager = CLLocationManager.init()
+    var locationManager = LocationManager()
 }

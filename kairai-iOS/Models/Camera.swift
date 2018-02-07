@@ -49,11 +49,12 @@ class Camera : ConnectedSensor, UIImagePickerControllerDelegate, UINavigationCon
         if let imageData = encodePngBase64(image: image) {
             let width = image.cgImage!.width
             let height = image.cgImage!.height
-            let data: Dictionary<String, Any> = [
+            let data: [String:Any] = [
                 "width": width,
                 "height": height,
                 "data": imageData,
-                "format": "png"
+                "format": "png",
+                "timestamp": timestamp()
             ]
             self.send(data: data)
         }

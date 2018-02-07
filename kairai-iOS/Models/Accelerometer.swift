@@ -55,10 +55,11 @@ class Accelerometer : CMSensor {
         guard let accelZ = data?.acceleration.z else {
             return
         }
-        let payload = [
-            "accelX": accelX,
-            "accelY": accelY,
-            "accelZ": accelZ
+        let payload: [String : Any] = [
+            "x": accelX,
+            "y": accelY,
+            "z": accelZ,
+            "timestamp": timestamp()
         ]
         self.send(data: payload)
     }

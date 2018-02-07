@@ -27,6 +27,15 @@ class Platform {
         }
     }
     
+    var gps: Gps? {
+        for sensor in self.sensors {
+            if sensor.type == .gps {
+                return sensor as? Gps
+            }
+        }
+        return nil
+    }
+    
     let productId: ProductId
     var sensors: [ConnectedSensor]
     var _name: String

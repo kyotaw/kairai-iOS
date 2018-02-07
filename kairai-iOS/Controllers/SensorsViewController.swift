@@ -20,7 +20,10 @@ class SensorsViewController: UIViewController, SensorListViewDelegate {
                 self.present(errorView, animated: false, completion: nil)
             } else {
                 self.platform = platform
-                self.sensorListView = SensorListView(view: self.sensorTableView, sensors: platform!.sensors)
+                self.sensorListView = SensorListView(
+                    view: self.sensorTableView,
+                    sensors: self.platform.sensors,
+                    gps: self.platform.gps)
                 self.sensorListView.delegate = self
             }
         }

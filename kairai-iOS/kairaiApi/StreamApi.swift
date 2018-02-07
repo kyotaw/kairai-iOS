@@ -38,20 +38,13 @@ public typealias OnStopCB = ((StopData) -> Void)
 
 class KairaiStreamApi {
     init(
-        dataSourceHash: String,
         onConnect: @escaping OnConnectCB,
         onDisConnect: @escaping OnDisconnectCB,
         onError: @escaping OnErrorCB,
         onStart: @escaping OnStartCB,
         onStop: @escaping OnStopCB) {
         
-        self.socketManager = SocketManager(
-            socketURL: URL(string: self.endPoint)!,
-            config: [
-                .log(true),
-                .compress,
-                .connectParams(["dataSourceHash": dataSourceHash])
-            ])
+        self.socketManager = SocketManager(socketURL: URL(string: self.endPoint)!)
         self.socket = self.socketManager.socket(forNamespace: "/sources")
         
         self.onConnectCB = onConnect
@@ -67,7 +60,12 @@ class KairaiStreamApi {
         self.socket.on("stop", callback: self.onStop)
     }
     
-    func connect() {
+    func connect(params: [String:Any]) {
+        self.socketManager.config = [
+            .log(true),
+            .compress,
+            .connectParams(params)
+        ]
         self.socket.connect()
     }
     

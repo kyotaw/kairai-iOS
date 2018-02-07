@@ -12,7 +12,6 @@ class ConnectedSensor : Sensor {
     override init(productId: ProductId, spec: Dictionary<String,Any>) {
         super.init(productId: productId, spec: spec)
         self.streamApi = KairaiStreamApi(
-            dataSourceHash: productId.hash,
             onConnect: self.onConnect,
             onDisConnect: self.onDisconnect,
             onError: self.onError,
@@ -22,7 +21,14 @@ class ConnectedSensor : Sensor {
     
     func connect() {
         if self.status.isOffline {
-            self.streamApi.connect()
+            var params: [String:Any] = ["dataSourceHas": self.productId.hash]
+            if let location = self.location {
+                params["location"] = [
+                    "latitude": location.latitude,
+                    "longitude": location.longitude
+                ]
+            }
+            self.streamApi.connect(params: params)
             self.status.connectionState = .connecting
             self.delegate?.changedState(sensor: self)
         }

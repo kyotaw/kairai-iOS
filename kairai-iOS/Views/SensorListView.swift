@@ -17,9 +17,10 @@ protocol SensorListViewDelegate {
 
 class SensorListView : NSObject, UITableViewDelegate, UITableViewDataSource, SensorListViewCellDelegate {
     
-    init(view: UITableView, sensors: [ConnectedSensor]) {
+    init(view: UITableView, sensors: [ConnectedSensor], gps: Gps?) {
         self.view = view
         self.sensors = sensors
+        self.gps = gps
         self.view.tableFooterView = UIView()
         
         super.init()
@@ -69,6 +70,9 @@ class SensorListView : NSObject, UITableViewDelegate, UITableViewDataSource, Sen
     }
     
     func pushedConnectButton(cell: SensorListViewCell) {
+        if let gps = self.gps {
+            cell.sensor.location = gps.currentLocation
+        }
         cell.sensor.connect()
     }
     
@@ -93,6 +97,7 @@ class SensorListView : NSObject, UITableViewDelegate, UITableViewDataSource, Sen
     var delegate: SensorListViewDelegate?
     
     fileprivate let sensors: [ConnectedSensor]
+    fileprivate let gps: Gps?
     fileprivate let view: UITableView
     
 }

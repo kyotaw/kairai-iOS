@@ -48,8 +48,9 @@ class Barometer : CMSensor {
             print(e)
         } else {
             if let d = data {
-                let payload = [
-                    "pressure": d.pressure.doubleValue
+                let payload: [String : Any] = [
+                    "pressure": d.pressure.doubleValue,
+                    "timestamp": timestamp()
                 ]
                 self.send(data: payload)
             }

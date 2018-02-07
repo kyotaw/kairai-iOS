@@ -45,7 +45,10 @@ class Sensor : NSObject{
     }
     
     func getSpec(name: String) -> Any {
-        return self._spec[name]
+        guard let val = self._spec[name] else {
+            return ""
+        }
+        return val
     }
     
     var isAvailable: Bool {
@@ -66,6 +69,7 @@ class Sensor : NSObject{
     var _status: SensorStatus
     var _type: SensorType
     var _spec: Dictionary<String,Any>
+    var location: Location?
     
     var delegate: SensorDelegate?
 }
