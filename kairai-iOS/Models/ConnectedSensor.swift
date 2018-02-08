@@ -21,12 +21,10 @@ class ConnectedSensor : Sensor {
     
     func connect() {
         if self.status.isOffline {
-            var params: [String:Any] = ["dataSourceHas": self.productId.hash]
+            var params: [String:Any] = ["dataSourceHash": self.productId.hash]
             if let location = self.location {
-                params["location"] = [
-                    "latitude": location.latitude,
-                    "longitude": location.longitude
-                ]
+                params["latitude"] = location.latitude
+                params["longitude"] = location.longitude
             }
             self.streamApi.connect(params: params)
             self.status.connectionState = .connecting

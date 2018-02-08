@@ -23,7 +23,7 @@ class SensorsViewController: UIViewController, SensorListViewDelegate {
                 self.sensorListView = SensorListView(
                     view: self.sensorTableView,
                     sensors: self.platform.sensors,
-                    gps: self.platform.gps)
+                    positioningSystem: self.platform.positioningSystem)
                 self.sensorListView.delegate = self
             }
         }

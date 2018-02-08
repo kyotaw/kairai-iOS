@@ -12,7 +12,7 @@ import Foundation
 enum SensorType : String {
     case fingerprintSensor = "fingerprintSensor"
     case proximitySensor = "proximitySensor"
-    case gps = "gps"
+    case positioningSystem = "positioningSystem"
     case accelerometer = "accelerometer"
     case gyroscope = "gyroscope"
     case magneticSensor = "magneticSensor"
@@ -31,7 +31,7 @@ enum SensorType : String {
         return [
             .fingerprintSensor,
             .proximitySensor,
-            .gps,
+            .positioningSystem,
             .accelerometer,
             .gyroscope,
             .magneticSensor,

@@ -29,6 +29,7 @@ class Barometer : CMSensor {
     
     override func stopDataGeneration() {
         self.altimeter.stopRelativeAltitudeUpdates()
+        super.stopDataGeneration()
     }
     
     override func onStart(data: StartData) {

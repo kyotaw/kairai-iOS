@@ -31,6 +31,7 @@ class Accelerometer : CMSensor {
     
     override func stopDataGeneration() {
         self.motionManager.stopAccelerometerUpdates()
+        super.stopDataGeneration()
     }
     
     override func onStart(data: StartData) {

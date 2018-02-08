@@ -8,7 +8,7 @@
 
 import Foundation
 
-public func getGpsSpec(modelName: String) -> Dictionary<String, Any> {
+public func getPositioningSystemSpec(modelName: String) -> Dictionary<String, Any> {
     return [
         "accuracy": 3,
     ]

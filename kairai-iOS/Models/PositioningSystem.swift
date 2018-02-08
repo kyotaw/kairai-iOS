@@ -11,11 +11,11 @@ import CoreLocation
 
 import SocketIO
 
-class Gps : ConnectedSensor, LocationManagerDelegate {
+class PositioningSystem : ConnectedSensor, LocationManagerDelegate {
     
     init(id: ProductId, spec: Dictionary<String,Any>) {
         super.init(productId: id, spec: spec)
-        self._type = .gps
+        self._type = .positioningSystem
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation() // get current location
     }
@@ -35,6 +35,7 @@ class Gps : ConnectedSensor, LocationManagerDelegate {
     
     override func stopDataGeneration() {
         self.locationManager.stopUpdatingLocation()
+        super.stopDataGeneration()
     }
     
     override func onStart(data: StartData) {

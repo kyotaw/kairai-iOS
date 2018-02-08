@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Controllers/SensorsViewController.swift"
-            timestampString = "539708741.206135"
+            timestampString = "539801790.467568"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
@@ -26,7 +26,7 @@
                   moduleName = "kairai-iOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kyota/work/kairai-iOS/kairai-iOS/Controllers/SensorsViewController.swift"
-                  timestampString = "538203222.2227809"
+                  timestampString = "539788937.770388"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -41,7 +41,7 @@
                   moduleName = "kairai-iOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kyota/work/kairai-iOS/kairai-iOS/Controllers/SensorsViewController.swift"
-                  timestampString = "538203222.2260391"
+                  timestampString = "539788937.775371"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Controllers/LoginViewController.swift"
-            timestampString = "539708353.899261"
+            timestampString = "539801790.467644"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Controllers/SensorsViewController.swift"
-            timestampString = "539708741.206226"
+            timestampString = "539801790.467963"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/kairaiApi/KairaiResource.swift"
-            timestampString = "538589660.155811"
+            timestampString = "539788937.511536"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -185,24 +185,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "kairai-iOS/Services/PlatformService.swift"
-            timestampString = "539707516.1824549"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "getPlatrom(callback:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Controllers/SensorsViewController.swift"
-            timestampString = "539708741.2063349"
+            timestampString = "539801790.4680769"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "18"
@@ -218,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Controllers/SensorsViewController.swift"
-            timestampString = "539708741.206375"
+            timestampString = "539801790.46812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -234,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Controllers/SensorsViewController.swift"
-            timestampString = "539708741.206412"
+            timestampString = "539801790.468161"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -314,12 +298,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/kairaiApi/KairaiResource.swift"
-            timestampString = "538589660.156323"
+            timestampString = "539788937.524707"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "72"
             endingLineNumber = "72"
-            landmarkName = "registerDataSource(modelNumber:serialNumber:vendorName:name:sourceType:monoHash:callback:)"
+            landmarkName = "registerDataSource(modelNumber:serialNumber:vendorName:name:sourceType:monoHash:spec:callback:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -330,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Services/PlatformService.swift"
-            timestampString = "539707516.183213"
+            timestampString = "539801183.218598"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
@@ -394,7 +378,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Services/PlatformService.swift"
-            timestampString = "539707516.1834691"
+            timestampString = "539801183.218676"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -442,7 +426,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Views/SensorListView.swift"
-            timestampString = "539708741.2066129"
+            timestampString = "539801790.4683729"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -458,11 +442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Models/ConnectedSensor.swift"
-            timestampString = "539708741.206959"
+            timestampString = "539801790.468666"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "onError(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -474,11 +458,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Models/ConnectedSensor.swift"
-            timestampString = "539708741.2072771"
+            timestampString = "539801790.46901"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "onDisconnect(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -490,11 +474,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Models/ConnectedSensor.swift"
-            timestampString = "539708741.207491"
+            timestampString = "539801790.4692661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "onConnect(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -506,13 +490,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/kairaiApi/StreamApi.swift"
-            timestampString = "539708741.207688"
+            timestampString = "539801790.469539"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
-            landmarkName = "KairaiStreamApi"
-            landmarkType = "3">
+            landmarkName = "send(data:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -522,13 +506,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/kairaiApi/StreamApi.swift"
-            timestampString = "539708741.207763"
+            timestampString = "539801790.469594"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
             endingLineNumber = "85"
-            landmarkName = "KairaiStreamApi"
-            landmarkType = "3">
+            landmarkName = "onConnect(data:ack:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -538,13 +522,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/kairaiApi/StreamApi.swift"
-            timestampString = "539708741.207809"
+            timestampString = "539801790.46964"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "89"
             endingLineNumber = "89"
-            landmarkName = "KairaiStreamApi"
-            landmarkType = "3">
+            landmarkName = "onDisconnect(data:ack:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -554,13 +538,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/kairaiApi/StreamApi.swift"
-            timestampString = "539708741.207853"
+            timestampString = "539801790.469685"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
             endingLineNumber = "93"
-            landmarkName = "KairaiStreamApi"
-            landmarkType = "3">
+            landmarkName = "onError(data:ack:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -570,13 +554,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/kairaiApi/StreamApi.swift"
-            timestampString = "539708741.2078969"
+            timestampString = "539801790.4697289"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
             endingLineNumber = "97"
-            landmarkName = "KairaiStreamApi"
-            landmarkType = "3">
+            landmarkName = "onStart(data:ack:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -586,7 +570,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/kairaiApi/StreamApi.swift"
-            timestampString = "539708741.207939"
+            timestampString = "539801790.4697731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
@@ -602,13 +586,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/kairaiApi/StreamApi.swift"
-            timestampString = "539708741.20798"
+            timestampString = "539801790.469817"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
             endingLineNumber = "69"
-            landmarkName = "KairaiStreamApi"
-            landmarkType = "3">
+            landmarkName = "connect(params:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -618,12 +602,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Models/Accelerometer.swift"
-            timestampString = "538589660.158641"
+            timestampString = "539801790.4698631"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
             endingLineNumber = "28"
-            landmarkName = "onStart(data:)"
+            landmarkName = "startDataGeneration()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -634,27 +618,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Models/Accelerometer.swift"
-            timestampString = "538589660.158697"
+            timestampString = "539801790.4699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "CMAccelerometer"
-            landmarkType = "3">
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "onStop(data:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Models/ConnectedSensor.swift"
-            timestampString = "539708741.2080539"
+            timestampString = "539801790.469934"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "onStop(data:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -666,12 +650,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Models/Accelerometer.swift"
-            timestampString = "538589660.158962"
+            timestampString = "539801790.470202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "onStop(data:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "onStart(data:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -698,7 +682,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Models/LocationManager.swift"
-            timestampString = "539708741.211794"
+            timestampString = "539801790.473191"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -714,7 +698,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Models/LocationManager.swift"
-            timestampString = "539708741.211898"
+            timestampString = "539801790.473243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -730,7 +714,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Models/LocationManager.swift"
-            timestampString = "539708741.21197"
+            timestampString = "539801790.47329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
@@ -746,7 +730,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Models/LocationManager.swift"
-            timestampString = "539708741.212045"
+            timestampString = "539801790.473331"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -762,7 +746,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Views/SensorListView.swift"
-            timestampString = "539708741.212132"
+            timestampString = "539801790.4733731"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -778,12 +762,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "kairai-iOS/Models/Gps.swift"
-            timestampString = "539708741.212478"
+            timestampString = "539801183.225896"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
             endingLineNumber = "20"
             landmarkName = "init(id:spec:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kairai-iOS/kairaiApi/StreamApi.swift"
+            timestampString = "539801790.473597"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "disconnect()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kairai-iOS/Models/ConnectedSensor.swift"
+            timestampString = "539801790.4736741"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "connect()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kairai-iOS/kairaiApi/StreamApi.swift"
+            timestampString = "539801790.4738851"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "onDisconnect(data:ack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kairai-iOS/kairaiApi/StreamApi.swift"
+            timestampString = "539801790.47393"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "onStop(data:ack:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kairai-iOS/Models/Accelerometer.swift"
+            timestampString = "539801790.473985"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "onStop(data:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -27,10 +27,10 @@ class Platform {
         }
     }
     
-    var gps: Gps? {
+    var positioningSystem: PositioningSystem? {
         for sensor in self.sensors {
-            if sensor.type == .gps {
-                return sensor as? Gps
+            if sensor.type == .positioningSystem {
+                return sensor as? PositioningSystem
             }
         }
         return nil
