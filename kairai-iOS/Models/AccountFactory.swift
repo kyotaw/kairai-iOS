@@ -12,13 +12,13 @@ import SwiftyJSON
 
 
 class AccountFactory {
-    static func create(json: JSON) -> Account? {
-        guard let owner = json["owner"].dictionary else {
+    static func create(data: JSON) -> Account? {
+        guard let accessToken = data["accessToken"].string else {
             return nil
         }
-        guard let ownerId = owner["ownerId"]?.string else {
+        guard let userId = data["userId"].string else {
             return nil
         }
-        return Account(ownerId: ownerId)
+        return Account(userId: userId, accessToken: accessToken)
     }
 }

@@ -18,19 +18,15 @@ class LoginViewController: UIViewController {
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.userIdText.text = "testuser"
-        self.passwordText.text = "pass"
+        self.userIdText.text = TEST_USER
+        self.passwordText.text = TEST_PASSWORD
     }
     
     @IBAction func pushLoginButton(_ sender: Any) {
         let userId = self.userIdText.text!
         let password = self.passwordText.text!
         
-        getApp().setAccount(account: Account(ownerId: userId))
-        self.performSegue(withIdentifier: self.mainViewSegue, sender: nil)
-        
-        /*
-        AccountService.login(ownerId: userId, password: password) { (err, account) in
+        AccountService.login(userId: userId, password: password) { (err, account) in
             DispatchQueue.main.async {
                 if let e = err {
                     let errorView = createErrorModal(title: e.errorType.rawValue, message: e.message) {_ in }
@@ -40,12 +36,11 @@ class LoginViewController: UIViewController {
                     self.performSegue(withIdentifier: self.mainViewSegue, sender: nil)
                 }
             }
-        }*/
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == self.mainViewSegue {
-
         }
     }
     

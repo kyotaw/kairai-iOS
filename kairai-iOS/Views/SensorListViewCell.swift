@@ -45,25 +45,24 @@ class SensorListViewCell : UITableViewCell, SensorDelegate {
     internal func setSensor(sensor: ConnectedSensor) {
         self.sensor = sensor
         sensor.delegate = self
-        self.sensorNameLabel.text = sensor.name
-        self.dataAmountLabel.text = 0.description
-        self.dataUnitLabel.text = "MB"
-        self.sensorStatus.text = sensor.status.hasPermission ? sensor.status.currentState : "No Permission"
+        self.sensorNameLabel.text = sensor.type.rawValue
+        self.sensorStatus.text = sensor.isAvailable == false ? "unavailable" :
+                                 sensor.status.hasPermission ? sensor.status.currentState : "No Permission"
         self.actions.removeAll()
         
         if sensor.status.isOffline && sensor.status.isRegistered {
-            let action = UITableViewRowAction(style: .normal, title: "接続") { (_, _) in
+            let action = UITableViewRowAction(style: .normal, title: "Connect") { (_, _) in
                 self.delegate?.pushedConnectButton(cell: self)
             }
             self.actions.append(action)
         } else if sensor.status.isOnline || sensor.status.isConnecting {
-            let action = UITableViewRowAction(style: .normal, title: "切断") { (_, _) in
+            let action = UITableViewRowAction(style: .normal, title: "Disconnect") { (_, _) in
                 self.delegate?.pushedDisconnectButton(cell: self)
             }
             self.actions.append(action)
             
             if sensor.type == .camera {
-                let action = UITableViewRowAction(style: .normal, title: "撮影") { (_, _) in
+                let action = UITableViewRowAction(style: .normal, title: "Shot") { (_, _) in
                     self.delegate?.pushedPictureButton(cell: self)
                 }
                 self.actions.append(action)
@@ -72,8 +71,6 @@ class SensorListViewCell : UITableViewCell, SensorDelegate {
     }
     
     @IBOutlet weak var sensorNameLabel: UILabel!
-    @IBOutlet weak var dataAmountLabel: UILabel!
-    @IBOutlet weak var dataUnitLabel: UILabel!
     @IBOutlet weak var sensorStatus: UILabel!
     
     var sensor: ConnectedSensor!

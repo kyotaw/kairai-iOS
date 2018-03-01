@@ -20,14 +20,12 @@ class PlatformFactory {
         guard let id = PlatformFactory.createProductId() else {
             return nil
         }
-        var modelName = id.modelNumber
-        if let name = PlatformList[id.modelNumber] {
-            modelName = name
-        }
+        let modelName = PlatformFactory.defaultPlatformName
         
         var sensors = [ConnectedSensor]()
         for type in SensorType.list {
-            if let sensor = SensorFactory.create(sourceType: type.rawValue, productId: id, modelName: modelName) {
+            let name = PlatformFactory.getSensorName(type: type, modelName: modelName)
+            if let sensor = SensorFactory.create(sourceType: type.rawValue, productId: id, name: name, modelName: modelName) {
                 sensors.append(sensor)
             }
         }
@@ -77,10 +75,9 @@ class PlatformFactory {
         // not registered sensors
         for type in sensorList {
             let sensorId = ProductId(modelNumber: modelNumber + type.rawValue, serialNumber: serialNumber, vendorName: vendorName)
-            if let sensor = SensorFactory.create(sourceType: type.rawValue, productId: sensorId, modelName: modelName) {
-                if sensor.isAvailable {
-                    sensors.append(sensor)
-                }
+            let name = PlatformFactory.getSensorName(type: type, modelName: modelName)
+            if let sensor = SensorFactory.create(sourceType: type.rawValue, productId: sensorId, name: name, modelName: modelName) {
+                sensors.append(sensor)
             }
         }
         return Platform(id: productId, name: name, sensors: sensors)
@@ -97,6 +94,16 @@ class PlatformFactory {
         return ProductId(modelNumber: model, serialNumber: modelId, vendorName: PlatformFactory.vendorName)
     }
     
+    static var defaultPlatformName: String {
+        guard let id = PlatformFactory.createProductId() else {
+            return ""
+        }
+        if let name = PlatformList[id.modelNumber] {
+            return name
+        }
+        return id.modelNumber
+    }
+    
     static var modelNumber: String? {
         var size: Int = 0
         if sysctlbyname("hw.machine", nil, &size, nil, 0) != 0 {
@@ -111,6 +118,10 @@ class PlatformFactory {
     
     static var serialNumber: String? {
         return UIDevice.current.identifierForVendor?.uuidString
+    }
+    
+    static func getSensorName(type: SensorType, modelName: String) -> String {
+        return modelName + "'s " + type.rawValue
     }
     
 }

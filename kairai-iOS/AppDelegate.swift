@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return self.account
     }
     
-    var account: Account?
+    var account: Account!
     
 }
 

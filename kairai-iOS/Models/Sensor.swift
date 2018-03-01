@@ -13,8 +13,9 @@ protocol SensorDelegate {
 }
 
 class Sensor : NSObject{
-    init(productId: ProductId, spec: Dictionary<String,Any>) {
-        self._productId = productId
+    init(id: ProductId, name: String, spec: Dictionary<String,Any>) {
+        self._productId = id
+        self._name = name
         self._status = SensorStatus()
         self._type = .unavailableSensor
         self._spec = spec
@@ -33,7 +34,7 @@ class Sensor : NSObject{
     }
     
     var name: String {
-        return self._type.rawValue
+        return self._name
     }
     
     var spec: Dictionary<String,Any> {
@@ -65,7 +66,8 @@ class Sensor : NSObject{
         self.delegate?.changedState(sensor: self)
     }
     
-    let _productId: ProductId
+    var _productId: ProductId
+    var _name: String
     var _status: SensorStatus
     var _type: SensorType
     var _spec: Dictionary<String,Any>

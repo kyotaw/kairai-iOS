@@ -13,8 +13,8 @@ import SocketIO
 
 class Barometer : CMSensor {
     
-    override init(id: ProductId, spec: Dictionary<String,Any>) {
-        super.init(id: id, spec: spec)
+    override init(id: ProductId, name: String, spec: Dictionary<String,Any>) {
+        super.init(id: id, name: name, spec: spec)
         self._type = .barometer
     }
     

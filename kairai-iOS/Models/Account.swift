@@ -10,9 +10,13 @@ import Foundation
 
 
 class Account {
-    init(ownerId: String) {
-        self.ownerId = ownerId
+    init(userId: String, accessToken: String) {
+        self.userId = userId
+        self.accessToken = accessToken
+        self.api = KairaiApi(accessToken: accessToken)
     }
     
-    let ownerId: String
+    let api: KairaiApi
+    let userId: String
+    let accessToken: String
 }

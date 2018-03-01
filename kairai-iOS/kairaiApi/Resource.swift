@@ -39,7 +39,7 @@ internal class Resource {
         headers: Dictionary<String, String>=[:],
         callback: @escaping KairaiCallback) {
         
-        let queryUrl = Resource.addQueryParameters(url: url, params: queryParams)
+        let queryUrl = self.addQueryParameters(url: url, params: queryParams)
         Alamofire.request(queryUrl, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
             .responseJSON(queue: DispatchQueue.global(qos: DispatchQoS.QoSClass.default
             )) {
@@ -89,7 +89,7 @@ internal class Resource {
         return queryUrl.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
     }
     
-    fileprivate static func processResponse(res: JSON?, callback: KairaiCallback) {
+    static fileprivate func processResponse(res: JSON?, callback: KairaiCallback) {
         let status = res!["status"].stringValue
         if status == "error" {
             let code = res!["errorCode"].intValue
@@ -104,6 +104,6 @@ internal class Resource {
         }
     }
     
-    internal static let url = "http://172.22.1.11:6171/api"
+    internal static let url = "http://172.22.1.38:6171/api"
     //internal static let url = "https://kairai.herokuapp.com/api"
 }

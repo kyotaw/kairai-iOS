@@ -8,10 +8,14 @@
 
 import Foundation
 
-class SenserService {
+class SensorService {
     
-    static func regsiterSensor(sensor: Sensor, platform: Platform, callback: @escaping (MetaError?) -> Void) {
-        KairaiApi.registerDataSource(
+    init(api: KairaiApi) {
+        self.api = api
+    }
+    
+    func regsiterSensor(sensor: Sensor, platform: Platform, callback: @escaping (MetaError?) -> Void) {
+        self.api.registerDataSource(
             productId: sensor.productId,
             name: sensor.name,
             sourceType: sensor.type.rawValue,
@@ -26,4 +30,6 @@ class SenserService {
             }
         }
     }
+    
+    let api: KairaiApi
 }

@@ -109,6 +109,6 @@ class KairaiStreamApi {
     let onStartCB: OnStartCB
     let onStopCB: OnStopCB
     
-    let endPoint = "http://172.22.1.11:6171/api/data_stream"
+    let endPoint = "http://172.22.1.38:6171/api/data_stream"
     //let endPoint = "https://kairai.herokuapp.com/api/data_stream"
 }

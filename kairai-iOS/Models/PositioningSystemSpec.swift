@@ -10,6 +10,7 @@ import Foundation
 
 public func getPositioningSystemSpec(modelName: String) -> Dictionary<String, Any> {
     return [
-        "accuracy": 3,
+        "methods": ["gps", "wifi"],
+        "maxAccuracy": 3,
     ]
 }

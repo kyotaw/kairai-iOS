@@ -25,6 +25,7 @@ enum SensorType : String {
     case beacon = "beacon"
     case nfc = "nfc"
     case barometer = "barometer"
+    case brainwaveSensor = "brainwaveSensor"
     case unavailableSensor = "unavailableSensor"
     
     static var list: [SensorType] {
@@ -43,7 +44,8 @@ enum SensorType : String {
             .camera,
             .beacon,
             .nfc,
-            .barometer
+            .barometer,
+            .brainwaveSensor
         ]
     }
 }

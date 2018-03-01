@@ -14,7 +14,10 @@ class SensorsViewController: UIViewController, SensorListViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        PlatformService.getPlatrom() { (err, platform) in
+        MWMDevice.sharedInstance() // initialize MWMDevice instance
+        self.platformService = PlatformService(api: getApp().account.api)
+        
+        self.platformService.getPlatrom() { (err, platform) in
             if let e = err {
                 let errorView = createErrorModal(title: e.errorType.rawValue, message: e.message) {_ in }
                 self.present(errorView, animated: false, completion: nil)
@@ -66,6 +69,7 @@ class SensorsViewController: UIViewController, SensorListViewDelegate {
     }
     
     var platform: Platform!
+    var platformService: PlatformService!
     var sensorListView: SensorListView!
     
     let sensorDetailSegue = "sensorDetailSegue"

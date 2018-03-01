@@ -12,23 +12,28 @@ import SwiftyJSON
 
 internal class KairaiResource : Resource {
     
-    static func login(ownerId: String, password: String, callback: @escaping KairaiCallback) {
-        let endPoint = [Resource.url, "owners", "login"].joined(separator: "/")
-        let params = [
-            "ownerId": ownerId,
-            "password": password
-        ]
-        self.post(url: endPoint, params: params, callback: callback)
+    init(accessToken: String) {
+        self.acccessToken = accessToken
     }
     
-    static func getMono(modelNumber: String, serialNumber: String, vendorName: String, callback: @escaping KairaiCallback) {
+    static func login(userId: String, password: String, callback: @escaping KairaiCallback) {
+        let endPoint = [Resource.url, "auth", "login"].joined(separator: "/")
+        let params = [
+            "userId": userId,
+            "password": password
+        ]
+        Resource.get(endPoint, params: params, callback: callback)
+    }
+    
+    func getMono(modelNumber: String, serialNumber: String, vendorName: String, callback: @escaping KairaiCallback) {
         let endPoint = [Resource.url, "monos"].joined(separator: "/")
         let params = [
             "modelNumber": modelNumber,
             "serialNumber": serialNumber,
             "vendorName": vendorName
         ]
-        self.get(endPoint, params: params) { (err, data) in
+        let headers = self.makeHeaders()
+        Resource.get(endPoint, params: params, headers: headers) { (err, data) in
             if (err != nil) {
                 callback(err, nil)
             } else {
@@ -41,7 +46,7 @@ internal class KairaiResource : Resource {
         }
     }
     
-    static func registerMono(modelNumber: String, serialNumber: String, vendorName: String, name: String, callback: @escaping KairaiCallback) {
+    func registerMono(modelNumber: String, serialNumber: String, vendorName: String, name: String, callback: @escaping KairaiCallback) {
         let endPoint = [Resource.url, "monos"].joined(separator: "/")
         let params = [
             "modelNumber": modelNumber,
@@ -49,10 +54,11 @@ internal class KairaiResource : Resource {
             "vendorName": vendorName,
             "name": name
         ]
-        self.post(url: endPoint, params: params, callback: callback)
+        let headers = self.makeHeaders()
+        Resource.post(url: endPoint, params: params, headers: headers, callback: callback)
     }
     
-    static func registerDataSource(
+    func registerDataSource(
         modelNumber: String,
         serialNumber: String,
         vendorName: String,
@@ -71,6 +77,15 @@ internal class KairaiResource : Resource {
             "sourceType": sourceType,
             "spec": spec
             ]
-        self.post(url: endPoint, params: params, callback: callback)
+        let headers = self.makeHeaders()
+        Resource.post(url: endPoint, params: params, headers: headers, callback: callback)
     }
+    
+    fileprivate func makeHeaders() -> [String:String] {
+        return [
+            "Authorization": "Bearer " + self.acccessToken
+        ]
+    }
+    
+    let acccessToken: String
 }

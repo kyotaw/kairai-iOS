@@ -10,12 +10,12 @@ import Foundation
 
 
 class AccountService {
-    static func login(ownerId: String, password: String, callback: @escaping (MetaError?, Account?) -> Void) {
-        KairaiApi.login(ownerId: ownerId, password: password) { (err, data) in
+    static func login(userId: String, password: String, callback: @escaping (MetaError?, Account?) -> Void) {
+        KairaiApi.login(userId: userId, password: password) { (err, data) in
             if let e = err {
                 callback(MetaError(errorType: .loginError, message: e.message), nil)
             } else {
-                let account = AccountFactory.create(json: data!)
+                let account = AccountFactory.create(data: data!["data"])
                 callback(nil, account)
             }
         }

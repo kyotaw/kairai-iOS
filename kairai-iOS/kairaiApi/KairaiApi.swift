@@ -16,19 +16,23 @@ public typealias KairaiCallback = ((_ err: KairaiApiError?, _ res: JSON?) -> Voi
 
 public class KairaiApi {
     
-    static func login(ownerId: String, password: String, callback: @escaping KairaiCallback) {
-        KairaiResource.login(ownerId: ownerId, password: password, callback: callback)
+    init(accessToken: String) {
+        self.resource = KairaiResource(accessToken: accessToken)
     }
     
-    static func getMono(productId: ProductId, callback: @escaping KairaiCallback) {
-        KairaiResource.getMono(modelNumber: productId.modelNumber, serialNumber: productId.serialNumber, vendorName: productId.vendorName, callback: callback)
+    static func login(userId: String, password: String, callback: @escaping KairaiCallback) {
+        KairaiResource.login(userId: userId, password: password, callback: callback)
     }
     
-    static func registerMono(productId: ProductId, name: String, callback: @escaping KairaiCallback) {
-        KairaiResource.registerMono(modelNumber: productId.modelNumber, serialNumber: productId.serialNumber, vendorName: productId.vendorName, name: name, callback: callback)
+    func getMono(productId: ProductId, callback: @escaping KairaiCallback) {
+        self.resource.getMono(modelNumber: productId.modelNumber, serialNumber: productId.serialNumber, vendorName: productId.vendorName, callback: callback)
     }
     
-    static func registerDataSource(
+    func registerMono(productId: ProductId, name: String, callback: @escaping KairaiCallback) {
+        self.resource.registerMono(modelNumber: productId.modelNumber, serialNumber: productId.serialNumber, vendorName: productId.vendorName, name: name, callback: callback)
+    }
+    
+    func registerDataSource(
         productId: ProductId,
         name: String,
         sourceType: String,
@@ -36,6 +40,8 @@ public class KairaiApi {
         spec: Dictionary<String,Any>,
         callback: @escaping KairaiCallback) {
         
-        KairaiResource.registerDataSource(modelNumber: productId.modelNumber, serialNumber: productId.serialNumber, vendorName: productId.vendorName, name: name, sourceType: sourceType, monoHash: monoHash, spec: spec, callback: callback)
+        self.resource.registerDataSource(modelNumber: productId.modelNumber, serialNumber: productId.serialNumber, vendorName: productId.vendorName, name: name, sourceType: sourceType, monoHash: monoHash, spec: spec, callback: callback)
     }
+    
+    let resource: KairaiResource
 }

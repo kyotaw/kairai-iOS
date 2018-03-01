@@ -13,8 +13,8 @@ import SocketIO
 
 class PositioningSystem : ConnectedSensor, LocationManagerDelegate {
     
-    init(id: ProductId, spec: Dictionary<String,Any>) {
-        super.init(productId: id, spec: spec)
+    override init(id: ProductId, name: String, spec: Dictionary<String,Any>) {
+        super.init(id: id, name: name, spec: spec)
         self._type = .positioningSystem
         self.locationManager.delegate = self
         self.locationManager.startUpdatingLocation() // get current location
@@ -62,8 +62,10 @@ class PositioningSystem : ConnectedSensor, LocationManagerDelegate {
         if self.status.isActive {
             let location : CLLocation = locations.last!
             let data: [String:Any] = [
-                "latitude": location.coordinate.latitude,
-                "longitude": location.coordinate.longitude,
+                "location": [
+                    "latitude": location.coordinate.latitude,
+                    "longitude": location.coordinate.longitude,
+                ],
                 "timestamp": timestamp()
             ]
             self.send(data: data)

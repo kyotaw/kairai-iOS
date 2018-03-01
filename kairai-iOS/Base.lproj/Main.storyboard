@@ -28,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="1079" y="-19"/>
         </scene>
-        <!--Sensor List-->
+        <!--Sensors-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="SensorsViewController" customModule="kairai_iOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,53 +52,31 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q6-96-Yob">
-                                                    <rect key="frame" x="5" y="0.0" width="150" height="44"/>
+                                                    <rect key="frame" x="10" y="0.0" width="187.5" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSq-wa-uml">
-                                                    <rect key="frame" x="155" y="0.0" width="75" height="44"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7W-RS-PJf">
-                                                    <rect key="frame" x="230" y="0.0" width="37.5" height="43"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Active" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXz-5K-yCj">
-                                                    <rect key="frame" x="268" y="0.0" width="100" height="43"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXz-5K-yCj">
+                                                    <rect key="frame" x="197.5" y="0.0" width="187.5" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="oXz-5K-yCj" firstAttribute="width" secondItem="GtE-qf-BG6" secondAttribute="width" multiplier="0.3" id="02L-Qv-gvC"/>
-                                                <constraint firstItem="O7W-RS-PJf" firstAttribute="top" secondItem="GtE-qf-BG6" secondAttribute="top" id="0rY-1x-1hA"/>
+                                                <constraint firstItem="oXz-5K-yCj" firstAttribute="width" secondItem="GtE-qf-BG6" secondAttribute="width" multiplier="0.5" id="02L-Qv-gvC"/>
                                                 <constraint firstItem="oXz-5K-yCj" firstAttribute="top" secondItem="GtE-qf-BG6" secondAttribute="top" id="1Ru-C8-ecH"/>
-                                                <constraint firstAttribute="trailing" secondItem="oXz-5K-yCj" secondAttribute="trailing" constant="5" id="4cg-VM-0CN"/>
-                                                <constraint firstAttribute="bottom" secondItem="qSq-wa-uml" secondAttribute="bottom" id="8Po-ka-9H1"/>
+                                                <constraint firstAttribute="trailing" secondItem="oXz-5K-yCj" secondAttribute="trailing" constant="10" id="4cg-VM-0CN"/>
                                                 <constraint firstAttribute="bottom" secondItem="2q6-96-Yob" secondAttribute="bottom" id="AOl-F4-vuy"/>
                                                 <constraint firstAttribute="bottom" secondItem="oXz-5K-yCj" secondAttribute="bottom" id="EOc-Ky-N9h"/>
-                                                <constraint firstItem="qSq-wa-uml" firstAttribute="top" secondItem="GtE-qf-BG6" secondAttribute="top" id="Jcr-4v-EAv"/>
-                                                <constraint firstItem="qSq-wa-uml" firstAttribute="width" secondItem="GtE-qf-BG6" secondAttribute="width" multiplier="0.2" id="Nd7-I5-Ueg"/>
-                                                <constraint firstItem="2q6-96-Yob" firstAttribute="leading" secondItem="GtE-qf-BG6" secondAttribute="leading" constant="5" id="QYv-Mi-hdq"/>
+                                                <constraint firstItem="2q6-96-Yob" firstAttribute="leading" secondItem="GtE-qf-BG6" secondAttribute="leading" constant="10" id="QYv-Mi-hdq"/>
                                                 <constraint firstItem="2q6-96-Yob" firstAttribute="top" secondItem="GtE-qf-BG6" secondAttribute="top" id="RzP-1b-v2d"/>
-                                                <constraint firstItem="O7W-RS-PJf" firstAttribute="leading" secondItem="qSq-wa-uml" secondAttribute="trailing" id="cmq-Qg-wzg"/>
-                                                <constraint firstItem="qSq-wa-uml" firstAttribute="leading" secondItem="2q6-96-Yob" secondAttribute="trailing" id="eFa-He-maE"/>
-                                                <constraint firstItem="2q6-96-Yob" firstAttribute="width" secondItem="GtE-qf-BG6" secondAttribute="width" multiplier="0.4" id="mb9-3W-50b"/>
-                                                <constraint firstAttribute="bottom" secondItem="O7W-RS-PJf" secondAttribute="bottom" id="xgN-dT-E1U"/>
-                                                <constraint firstItem="oXz-5K-yCj" firstAttribute="leading" secondItem="O7W-RS-PJf" secondAttribute="trailing" id="yUj-za-Fpx"/>
-                                                <constraint firstItem="O7W-RS-PJf" firstAttribute="width" secondItem="GtE-qf-BG6" secondAttribute="width" multiplier="0.1" id="zyR-Lp-hZx"/>
+                                                <constraint firstItem="2q6-96-Yob" firstAttribute="width" secondItem="GtE-qf-BG6" secondAttribute="width" multiplier="0.5" id="mb9-3W-50b"/>
+                                                <constraint firstItem="oXz-5K-yCj" firstAttribute="leading" secondItem="2q6-96-Yob" secondAttribute="trailing" id="wt8-UZ-OkX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dataAmountLabel" destination="qSq-wa-uml" id="isa-qb-9gA"/>
-                                            <outlet property="dataUnitLabel" destination="O7W-RS-PJf" id="tKv-x3-2Te"/>
                                             <outlet property="sensorNameLabel" destination="2q6-96-Yob" id="REf-RQ-GSp"/>
                                             <outlet property="sensorStatus" destination="oXz-5K-yCj" id="7iA-Bw-FFg"/>
                                         </connections>
@@ -115,7 +93,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sensors" image="first" id="acW-dT-cKf"/>
-                    <navigationItem key="navigationItem" title="Sensor List" id="1Mg-vx-AX9"/>
+                    <navigationItem key="navigationItem" title="Sensors" id="1Mg-vx-AX9"/>
                     <connections>
                         <outlet property="sensorTableView" destination="Fld-6R-Szt" id="5lS-jg-kk9"/>
                         <segue destination="M22-M1-Zgm" kind="showDetail" identifier="sensorDetailSegue" id="Et7-iO-uWJ"/>
@@ -123,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2186" y="-21"/>
+            <point key="canvasLocation" x="2184.8000000000002" y="-21.139430284857571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yfm-nR-I93">

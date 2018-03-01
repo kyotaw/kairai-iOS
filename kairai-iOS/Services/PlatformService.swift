@@ -12,12 +12,16 @@ import SwiftyJSON
 
 class PlatformService {
     
-    static func getPlatrom(callback: @escaping (MetaError?, Platform?) -> Void) {
-        guard let platform = PlatformFactory.create() else {
+    init(api: KairaiApi) {
+        self.api = api
+    }
+    
+    func getPlatrom(callback: @escaping (MetaError?, Platform?) -> Void) {
+        guard let productId = PlatformFactory.createProductId() else {
             callback(MetaError(errorType: .deviceUnavailable), nil)
             return
         }
-        KairaiApi.getMono(productId: platform.productId) { (err, data) in
+        self.api.getMono(productId: productId) { (err, data) in
             if err == nil {
                 guard let monoData = data?["data"].array?.first else {
                     callback(MetaError(errorType: .deviceUnavailable), nil)
@@ -29,7 +33,7 @@ class PlatformService {
                 }
                 callback(nil, platform)
             } else if err!.errorType == .monoNotFound {
-                KairaiApi.registerMono(productId: platform.productId, name: platform.name) { (err, data) in
+                self.api.registerMono(productId: productId, name: PlatformFactory.defaultPlatformName) { (err, data) in
                     if let e = err {
                         callback(MetaError(errorType: .deviceUnavailable, message: e.message), nil)
                     } else {
@@ -49,4 +53,6 @@ class PlatformService {
             }
         }
     }
+    
+    let api: KairaiApi
 }
