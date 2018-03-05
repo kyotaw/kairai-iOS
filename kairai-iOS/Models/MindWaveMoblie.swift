@@ -33,7 +33,7 @@ class MindWaveMoblie : ConnectedSensor, MWMDelegate {
     }
     
     override func stopDataGeneration() {
-        self.mwmDevice.didConnect()
+        self.mwmDevice.disconnectDevice()
         super.stopDataGeneration()
     }
     
@@ -72,6 +72,10 @@ class MindWaveMoblie : ConnectedSensor, MWMDelegate {
     }
     
     func eegSample(_ sample: Int32) {
+        let data: [String:Any] = [
+            "samples": [sample]
+        ]
+        self.send(data: data)
         print(sample)
     }
     
