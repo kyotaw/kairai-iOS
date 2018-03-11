@@ -104,6 +104,6 @@ internal class Resource {
         }
     }
     
-    internal static let url = "http://172.22.1.38:6171/api"
+    internal static let url = "http://172.22.1.54:6171/api"
     //internal static let url = "https://kairai.herokuapp.com/api"
 }

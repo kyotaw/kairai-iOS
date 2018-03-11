@@ -52,31 +52,42 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Camera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2q6-96-Yob">
-                                                    <rect key="frame" x="10" y="0.0" width="187.5" height="44"/>
+                                                    <rect key="frame" x="10" y="0.0" width="150" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXz-5K-yCj">
-                                                    <rect key="frame" x="197.5" y="0.0" width="187.5" height="43"/>
+                                                    <rect key="frame" x="235" y="0.0" width="150" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="128fps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFf-1X-DWU">
+                                                    <rect key="frame" x="160" y="0.0" width="75" height="43"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="oXz-5K-yCj" firstAttribute="width" secondItem="GtE-qf-BG6" secondAttribute="width" multiplier="0.5" id="02L-Qv-gvC"/>
+                                                <constraint firstItem="oXz-5K-yCj" firstAttribute="width" secondItem="GtE-qf-BG6" secondAttribute="width" multiplier="0.4" id="02L-Qv-gvC"/>
                                                 <constraint firstItem="oXz-5K-yCj" firstAttribute="top" secondItem="GtE-qf-BG6" secondAttribute="top" id="1Ru-C8-ecH"/>
                                                 <constraint firstAttribute="trailing" secondItem="oXz-5K-yCj" secondAttribute="trailing" constant="10" id="4cg-VM-0CN"/>
                                                 <constraint firstAttribute="bottom" secondItem="2q6-96-Yob" secondAttribute="bottom" id="AOl-F4-vuy"/>
                                                 <constraint firstAttribute="bottom" secondItem="oXz-5K-yCj" secondAttribute="bottom" id="EOc-Ky-N9h"/>
+                                                <constraint firstItem="oXz-5K-yCj" firstAttribute="leading" secondItem="qFf-1X-DWU" secondAttribute="trailing" id="LwQ-08-gGl"/>
+                                                <constraint firstAttribute="bottom" secondItem="qFf-1X-DWU" secondAttribute="bottom" id="NpB-uc-sfP"/>
                                                 <constraint firstItem="2q6-96-Yob" firstAttribute="leading" secondItem="GtE-qf-BG6" secondAttribute="leading" constant="10" id="QYv-Mi-hdq"/>
+                                                <constraint firstItem="qFf-1X-DWU" firstAttribute="top" secondItem="GtE-qf-BG6" secondAttribute="top" id="R7m-Ev-Am3"/>
                                                 <constraint firstItem="2q6-96-Yob" firstAttribute="top" secondItem="GtE-qf-BG6" secondAttribute="top" id="RzP-1b-v2d"/>
-                                                <constraint firstItem="2q6-96-Yob" firstAttribute="width" secondItem="GtE-qf-BG6" secondAttribute="width" multiplier="0.5" id="mb9-3W-50b"/>
-                                                <constraint firstItem="oXz-5K-yCj" firstAttribute="leading" secondItem="2q6-96-Yob" secondAttribute="trailing" id="wt8-UZ-OkX"/>
+                                                <constraint firstItem="qFf-1X-DWU" firstAttribute="leading" secondItem="2q6-96-Yob" secondAttribute="trailing" id="by0-XY-f1m"/>
+                                                <constraint firstItem="qFf-1X-DWU" firstAttribute="width" secondItem="GtE-qf-BG6" secondAttribute="width" multiplier="0.2" id="c6U-Y3-yCW"/>
+                                                <constraint firstItem="2q6-96-Yob" firstAttribute="width" secondItem="GtE-qf-BG6" secondAttribute="width" multiplier="0.4" id="mb9-3W-50b"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="frameRateLabel" destination="qFf-1X-DWU" id="HAX-FT-dVA"/>
                                             <outlet property="sensorNameLabel" destination="2q6-96-Yob" id="REf-RQ-GSp"/>
                                             <outlet property="sensorStatus" destination="oXz-5K-yCj" id="7iA-Bw-FFg"/>
                                         </connections>

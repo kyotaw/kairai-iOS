@@ -46,6 +46,7 @@ class SensorListViewCell : UITableViewCell, SensorDelegate {
         self.sensor = sensor
         sensor.delegate = self
         self.sensorNameLabel.text = sensor.type.rawValue
+        self.frameRateLabel.text = sensor.frameRate.description + "fps"
         self.sensorStatus.text = sensor.isAvailable == false ? "unavailable" :
                                  sensor.status.hasPermission ? sensor.status.currentState : "No Permission"
         self.actions.removeAll()
@@ -72,6 +73,7 @@ class SensorListViewCell : UITableViewCell, SensorDelegate {
     
     @IBOutlet weak var sensorNameLabel: UILabel!
     @IBOutlet weak var sensorStatus: UILabel!
+    @IBOutlet weak var frameRateLabel: UILabel!
     
     var sensor: ConnectedSensor!
     var delegate: SensorListViewCellDelegate?

@@ -10,6 +10,8 @@ import Foundation
 
 class ConnectedSensor : Sensor {
     override init(id: ProductId, name: String, spec: Dictionary<String,Any>) {
+        self.frameRate = 0
+        self.prevTimestamp = 0
         super.init(id: id, name: name, spec: spec)
         self.streamApi = KairaiStreamApi(
             onConnect: self.onConnect,
@@ -59,6 +61,8 @@ class ConnectedSensor : Sensor {
     
     func onStart(data: StartData) {
         self.status.transState = .active
+        self.frameRate = 0
+        self.prevTimestamp = timestamp()
         self.delegate?.changedState(sensor: self)
     }
     
@@ -66,14 +70,23 @@ class ConnectedSensor : Sensor {
         self.status.transState = .ready
         self.delegate?.changedState(sensor: self)
     }
-    
-    func send(data: Dictionary<String, Double>) {
-        self.streamApi.send(data: data)
-    }
-    
+
     func send(data: Dictionary<String, Any>) {
         self.streamApi.send(data: data)
+        self.updateFrameRate()
+    }
+    
+    fileprivate func updateFrameRate() {
+        let now = timestamp()
+        let period = now - self.prevTimestamp
+        if period > 0 {
+            self.frameRate = Int(1.0 / (Double(period) / 1000.0))
+        }
+        self.prevTimestamp = now
     }
     
     var streamApi: KairaiStreamApi!
+    
+    var frameRate: Int
+    var prevTimestamp: Int64
 }
