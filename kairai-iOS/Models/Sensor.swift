@@ -58,12 +58,10 @@ class Sensor : NSObject{
     
     func startDataGeneration() {
         self.status.transState = .active
-        self.delegate?.changedState(sensor: self)
     }
     
     func stopDataGeneration() {
         self.status.transState = .ready
-        self.delegate?.changedState(sensor: self)
     }
     
     var _productId: ProductId
@@ -72,6 +70,5 @@ class Sensor : NSObject{
     var _type: SensorType
     var _spec: Dictionary<String,Any>
     var location: Location?
-    
-    var delegate: SensorDelegate?
+
 }

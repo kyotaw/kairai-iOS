@@ -28,13 +28,6 @@ class SensorsViewController: UIViewController, SensorListViewDelegate {
                     sensors: self.platform.sensors,
                     positioningSystem: self.platform.positioningSystem)
                 self.sensorListView.delegate = self
-                
-                self.updateTimer = Timer.scheduledTimer(
-                    timeInterval: 1,
-                    target: self,
-                    selector: #selector(SensorsViewController.updateView),
-                    userInfo: nil,
-                    repeats: true)
             }
         }
     }
@@ -71,10 +64,6 @@ class SensorsViewController: UIViewController, SensorListViewDelegate {
         }
     }
     
-    @objc fileprivate func updateView() {
-        self.sensorListView.reloadData()
-    }
-    
     @IBAction func unwindToSensorList(segue: UIStoryboardSegue) {
         self.sensorListView.reloadData()
     }
@@ -82,7 +71,6 @@ class SensorsViewController: UIViewController, SensorListViewDelegate {
     var platform: Platform!
     var platformService: PlatformService!
     var sensorListView: SensorListView!
-    var updateTimer: Timer?
     
     let sensorDetailSegue = "sensorDetailSegue"
     

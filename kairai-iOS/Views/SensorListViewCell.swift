@@ -17,7 +17,7 @@ protocol SensorListViewCellDelegate {
     func sensorStateChanged(cell: SensorListViewCell, sensor: Sensor)
 }
 
-class SensorListViewCell : UITableViewCell, SensorDelegate {
+class SensorListViewCell : UITableViewCell, ConnectedSensorDelegate {
     
     public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -42,11 +42,15 @@ class SensorListViewCell : UITableViewCell, SensorDelegate {
         self.delegate?.sensorStateChanged(cell: self, sensor: self.sensor)
     }
     
-    internal func setSensor(sensor: ConnectedSensor) {
+    func changedFrameRate(rate: Int) {
+        self.setFrameRate(rate: sensor.frameRate)
+    }
+    
+    func setSensor(sensor: ConnectedSensor) {
         self.sensor = sensor
         sensor.delegate = self
         self.sensorNameLabel.text = sensor.type.rawValue
-        self.frameRateLabel.text = sensor.frameRate.description + "fps"
+        self.setFrameRate(rate: sensor.frameRate)
         self.sensorStatus.text = sensor.isAvailable == false ? "unavailable" :
                                  sensor.status.hasPermission ? sensor.status.currentState : "No Permission"
         self.actions.removeAll()
@@ -69,6 +73,10 @@ class SensorListViewCell : UITableViewCell, SensorDelegate {
                 self.actions.append(action)
             }
         }
+    }
+    
+    func setFrameRate(rate: Int) {
+        self.frameRateLabel.text = rate.description + "fps"
     }
     
     @IBOutlet weak var sensorNameLabel: UILabel!

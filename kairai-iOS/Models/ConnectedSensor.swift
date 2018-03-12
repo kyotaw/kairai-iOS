@@ -8,6 +8,11 @@
 
 import Foundation
 
+protocol ConnectedSensorDelegate {
+    func changedState(sensor: Sensor)
+    func changedFrameRate(rate: Int)
+}
+
 class ConnectedSensor : Sensor {
     override init(id: ProductId, name: String, spec: Dictionary<String,Any>) {
         self.frameRate = 0
@@ -19,6 +24,16 @@ class ConnectedSensor : Sensor {
             onError: self.onError,
             onStart: self.onStart,
             onStop: self.onStop)
+    }
+    
+    override func startDataGeneration() {
+        super.startDataGeneration()
+        self.delegate?.changedState(sensor: self)
+    }
+    
+    override func stopDataGeneration() {
+        super.stopDataGeneration()
+        self.delegate?.changedState(sensor: self)
     }
     
     func connect() {
@@ -81,6 +96,7 @@ class ConnectedSensor : Sensor {
         let period = now - self.prevTimestamp
         if period > 0 {
             self.frameRate = Int(1.0 / (Double(period) / 1000.0))
+            self.delegate?.changedFrameRate(rate: self.frameRate)
         }
         self.prevTimestamp = now
     }
@@ -89,4 +105,6 @@ class ConnectedSensor : Sensor {
     
     var frameRate: Int
     var prevTimestamp: Int64
+    
+    var delegate: ConnectedSensorDelegate?
 }
